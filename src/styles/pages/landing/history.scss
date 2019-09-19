@@ -1,0 +1,22 @@
+.history{
+  background-color: var(--clear-background);
+  padding: 12vh 0;
+  .row{
+    justify-content: space-between;
+    position: relative;
+    .content-box{
+      width: 45%;
+    }
+    .image-content{
+      width: 40%;
+      position: absolute;
+      right: 0;
+      margin-bottom: 0;
+      img{
+        width: 100%;
+        max-height: 550px;
+        object-fit: cover;
+      }
+    }
+  }
+}

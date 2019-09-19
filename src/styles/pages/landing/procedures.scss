@@ -1,0 +1,12 @@
+.procedures{
+  margin: 20vh auto;
+  .list-container{
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        width: 50%;
+      }
+    }
+  }
+}

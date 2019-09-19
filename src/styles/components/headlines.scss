@@ -1,0 +1,12 @@
+
+.main-header{
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+  width: 60%;
+  hr{
+    background-color: var(--color-secondary);
+    height: 5px;
+    width: 48px;
+    margin-bottom: 8px;
+  }
+}

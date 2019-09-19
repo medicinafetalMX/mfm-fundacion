@@ -1,0 +1,36 @@
+ol{
+  margin: 2em 0;
+  font-family: var(--font-headers);
+  color: var(--color-primary);
+  font-weight: bold;
+  list-style: none;
+  counter-reset: li;
+  li{
+    counter-increment: li;
+  }
+  li::before{
+    content: counter(li);
+    color: var(--color-secondary);
+    margin-right: 1em;
+    width: 10px;
+    display: inline-block;
+  }
+}
+
+ul{
+  list-style: none;
+  font-family: var(--font-headers);
+  font-weight: bold;
+  margin: 4em 0;
+  li{
+    color: var(--color-primary);
+    &::before{
+      content: "\2022";
+      color: var(--color-secondary);
+      font-weight: bold;
+      display: inline-block;
+      width: 10px;
+      margin-right: 1em;
+    }
+  }
+}

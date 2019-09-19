@@ -1,0 +1,65 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300|Roboto+Slab:400,700&display=swap');
+
+/* VARIABLES */
+
+:root{
+  --color-primary: #003A81;
+  --color-secondary: #05C8E0;
+  --clear-background: #F4F7FB;
+  --font-headers: 'Roboto Slab', serif;
+  --font-body: 'Muli', sans-serif;
+}
+
+/* COMPONENTS */
+
+@import "components/header.scss";
+@import "components/buttons.scss";
+@import "components/headlines.scss";
+@import "components/imageLink.scss";
+@import "components/lists.scss";
+@import "components/storyCards.scss";
+
+/* PAGES */
+
+@import "pages/landing/intro.scss";
+@import "pages/landing/about.scss";
+@import "pages/landing/institutions.scss";
+@import "pages/landing/history.scss";
+@import "pages/landing/procedures.scss";
+
+/* GENERAL STYLES */
+
+body{
+  font-family: var(--font-body);
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-headers);
+}
+
+a{
+  font-family: var(--font-headers);
+}
+
+.full-screen{
+  width: 100%;
+}
+
+.content-screen{
+  width: 95%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}

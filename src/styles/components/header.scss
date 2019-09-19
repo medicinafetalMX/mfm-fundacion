@@ -1,0 +1,124 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 1rem;
+  
+  .logo{
+    width: 250px;
+    img{
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    background-color: #ffffff;
+
+    .menu-link{
+      font-family: var(--font-headers);
+      font-size: 17px;
+      padding-bottom: 0.5rem;
+      text-decoration: none;
+      color: var(--color-primary);
+      font-weight: bold;
+      transition: all 0.5s ease;
+      margin-right: 1.7rem;
+      &:hover{
+        opacity: 1;
+        color: var(--color-secondary);
+      }
+    }
+
+    .drop-menu{
+      position: relative;
+      display: flex;
+      width: auto;
+      &:hover .drop-content{
+        visibility: visible;
+        opacity: 1;
+      }
+      &:hover .drop-content .top-line{
+        width: 70px;
+      }
+      .drop-button{
+        background-color: transparent;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+        outline: none;
+      }
+      .drop-content{
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        min-width: 230px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.05);
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 4px;
+        z-index: 10;
+        transition: all 0.3s ease;
+        .top-line{
+          width: 0;
+          height: 3px;
+          float: right;
+          transition: all 0.5s ease;
+          transition-delay: 0.3s;
+          background-color: var(--color-secondary);
+        }
+        a{
+          font-size: 16px;
+          text-decoration: none;
+          color: var(--color-primary);
+          display: flex;
+          width: 100%;
+          padding: 8px 30px;
+          transition: all 0.5s ease;
+          &:hover{
+            color: var(--color-secondary);
+          }
+          &:first-of-type{
+            margin-top: 12px;
+          }
+          &:last-of-type{
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+
+    .menu-control{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      .menu-label{
+        margin-right: 1rem;
+        padding-bottom: 0;
+        display: none;
+      }
+      .line{
+        width: 22px;
+        height: 2px;
+        background-color: var(--color-primary);
+      }
+      .top-line{
+        margin-bottom: 5px;
+      }
+      .bot-line{
+        margin-top: 5px;
+      }
+    }
+  }
+
+}

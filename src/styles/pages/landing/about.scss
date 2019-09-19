@@ -1,0 +1,15 @@
+.about{
+  margin: 15vh auto;
+  .row{
+    justify-content: space-between;
+    align-items: center;
+    .image-content{
+      width: 35%;
+      height: auto;
+      margin-bottom: 0;
+    }
+    .content-box{
+      width: 50%;
+    }
+  }
+}

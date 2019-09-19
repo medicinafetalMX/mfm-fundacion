@@ -1,0 +1,39 @@
+.story-card{
+  background-color: var(--clear-background);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 1rem;
+  margin-bottom: 2em;
+  .cover{
+    width: auto;
+    height: 240px;
+    overflow: hidden;
+    img{
+      height: 100%;
+      object-fit: cover;
+      margin-bottom: 0;
+    }
+  }
+  .content{
+    padding: 2em;
+    h4{
+      padding-top: 0;
+      margin-bottom: 0;
+      color: var(--color-primary);
+    }
+    .location{
+      font-size: 14px;
+      font-weight: bold;
+    }
+    p{
+      margin: 1em 0;
+      font-size: 16px;
+      line-height: 1.5em;
+
+    }
+    .primary-link{
+      font-size: 16px;
+    }
+  }
+}

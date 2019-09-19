@@ -1,0 +1,9 @@
+.institutions{
+  margin: 20vh auto;
+  .images-container{
+    display: grid;
+	  grid-gap: 20px;
+	  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr) );
+    margin: 15vh auto;
+  }
+}
