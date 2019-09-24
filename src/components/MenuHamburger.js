@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TimelineMax, TweenMax } from "gsap/all";
+import { TweenMax } from "gsap/all";
 
 class MenuHamburger extends Component{
   constructor(props) {

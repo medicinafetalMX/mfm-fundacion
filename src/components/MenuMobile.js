@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import { TimelineMax, Power3 } from "gsap";
+import { TimelineLite, Power3 } from "gsap";
 
 class MenuMobile extends Component {
   constructor(props) {
