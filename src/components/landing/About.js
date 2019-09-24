@@ -14,7 +14,7 @@ const About = () => (
           <p>
             Una de nuestros objetos sociales es realizar investigación, lo cual nos permite estar a la vanguardia en los temas de medicina fetal, así como apoyar a nuestros médicos investigadores a crear conocimiento nuevo.
           </p>
-          <PrimaryLink toPage="/medicinafetalmexico" text="Ir a Investigación" />
+          <PrimaryLink toPage="/" text="Ir a Investigación" />
         </div>
       </div>
     </div>

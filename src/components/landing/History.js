@@ -16,7 +16,7 @@ const HistoryBlock = () => (
           <p>
             Proporcionamos atención integral avanzada para el cuidado de la salud y seguridad tanto de la madre como del bebé en vida fetal, por medio de la última tecnología y de nuestro personal altamente calificado.
           </p>
-          <PrimaryLink toPage="/trayectoria" text="Conoce más" />
+          <PrimaryLink toPage="/" text="Conoce más" />
         </div>
         <div className="image-content">
           <img src={image} alt="" />

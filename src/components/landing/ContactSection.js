@@ -10,7 +10,7 @@ const ContactSection = () => (
         <p>
           ¿Deseas apoyar a una familia para que regresen con su bebé en brazos a casa?
         </p>
-        <Link to="/contacto" className="button button-cta">Contáctanos</Link>
+        <Link to="/" className="button button-cta">Contáctanos</Link>
       </div>
     </div>
   </section>

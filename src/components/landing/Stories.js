@@ -15,7 +15,7 @@ const Stories = () => (
           <p>
             A lo largo de nuestra carrera hemos ayudado a que nuestros pacientes puedan disfrutar la vida sin complicaciones.
           </p>
-          <PrimaryLink text="Ir a Testimonios" toPage="/testimonios" />
+          <PrimaryLink text="Ir a Testimonios" toPage="/" />
         </div>
         <div className="row">
           <StoryCard
