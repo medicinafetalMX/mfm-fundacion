@@ -5,36 +5,37 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet";
+import { TweenMax } from "gsap";
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+class Layout extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-      </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="site-content">
-        <main>{children}</main>
+    this.app = null;
+  }
+  componentDidMount() {
+    TweenMax.to(this.app, 0, {css: {visibility: 'visible'}});
+  }
+
+  render() {
+    return (
+      <div className="App" ref={div => this.app = div}>
+        <Helmet>
+          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        </Helmet>
+        <Header />
+        <div className="site-content">
+          <main>{this.props.children}</main>
+        </div>
       </div>
-    </>
-  )
+    )
+  }
 }
 
 Layout.propTypes = {

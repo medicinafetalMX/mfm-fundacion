@@ -47,6 +47,10 @@ a{
   font-family: var(--font-headers);
 }
 
+.App{
+  visibility: hidden;
+}
+
 .full-screen{
   width: 100%;
 }
