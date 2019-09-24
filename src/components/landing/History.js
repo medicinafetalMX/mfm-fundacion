@@ -7,17 +7,16 @@ import image from "../../images/surgeon2.png"
 const HistoryBlock = () => (
   <section className="history">
     <div className="content-screen">
-      <PrimaryHeader title="Nuestra trayectoria" />
+      <PrimaryHeader title="Cuidamos la salud madre e hijo" />
       <div className="row">
         <div className="column content-box">
           <p>
-            Realizamos <b>más de 100 cirugías fetales</b> en 24 meses, mejorando algunas técnicas quirúrgicas y realizamos 2 procedimientos nuevos en el mundo:
+            Somos una fundación sin fines de lucro que cuenta con tres objetos sociales: educación médica contínua, investigación, labor social.
           </p>
-          <ol>
-            <li>Intubación traqueal fetal endoscópica</li>
-            <li>Broncoscopía Fetal</li>
-          </ol>
-          <PrimaryLink toPage="/trayectoria" text="Ver Trayectoria Medicina Fetal México" />
+          <p>
+            Proporcionamos atención integral avanzada para el cuidado de la salud y seguridad tanto de la madre como del bebé en vida fetal, por medio de la última tecnología y de nuestro personal altamente calificado.
+          </p>
+          <PrimaryLink toPage="/trayectoria" text="Conoce más" />
         </div>
         <div className="image-content">
           <img src={image} alt="" />

@@ -5,16 +5,18 @@
 /* VARIABLES */
 
 :root{
-  --color-primary: #003A81;
-  --color-secondary: #05C8E0;
-  --clear-background: #F4F7FB;
+  --color-primary: #f5b4c8;
+  --color-secondary: #eb7095;
+  --clear-background: #fbf4f6;
   --font-headers: 'Roboto Slab', serif;
   --font-body: 'Muli', sans-serif;
+  --header-height: 100px;
 }
 
 /* COMPONENTS */
 
 @import "components/header.scss";
+@import "components/mobile-menu.scss";
 @import "components/buttons.scss";
 @import "components/headlines.scss";
 @import "components/imageLink.scss";
@@ -28,6 +30,7 @@
 @import "pages/landing/institutions.scss";
 @import "pages/landing/history.scss";
 @import "pages/landing/procedures.scss";
+@import "pages/landing/contact.scss";
 
 /* GENERAL STYLES */
 
@@ -62,4 +65,8 @@ a{
 .column{
   display: flex;
   flex-direction: column;
+}
+
+.site-content{
+  padding-top: var(--header-height);
 }

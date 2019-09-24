@@ -4,27 +4,16 @@ import PrimaryHeader from "../primaryHeader"
 
 const ContactSection = () => (
   <section className="contact">
-    <div className="row">
-      <div className="map">
-
-      </div>
+    <div className="content-screen">
       <div className="content-box column">
-        <PrimaryHeader title="Estamos cerca de ti" />
+        <PrimaryHeader title="Ayúdanos a apoyar" />
         <p>
-          Envíanos un mensaje o contáctanos en alguno de nuestros centros médicos.
+          ¿Deseas apoyar a una familia para que regresen con su bebé en brazos a casa?
         </p>
-        <Link to="/contacto" class="button button-cta">Enviar Mensaje</Link>
-        <div className="locations-container">
-          <ul>
-            <li>Hospital Star Médica Querétaro</li>
-            <li>Departamento de Medicina y Cirugía Fetal</li>
-            <li>Ciudad de México</li>
-            <li>Morelia, Michoacán</li>
-          </ul>
-        </div>
+        <Link to="/contacto" className="button button-cta">Contáctanos</Link>
       </div>
     </div>
   </section>
 )
 
-export default ContactSection
+export default ContactSection;

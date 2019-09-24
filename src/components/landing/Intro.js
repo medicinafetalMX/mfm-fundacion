@@ -3,8 +3,7 @@ import React from "react"
 
 import cover from "../../images/intro.jpeg"
 import facebook from "../../images/facebook.svg"
-import twitter from "../../images/twitter.svg"
-import youtube from "../../images/youtube.svg"
+import instagram from "../../images/instagram.svg"
 
 const Intro = () => (
   <section className="intro">
@@ -16,18 +15,15 @@ const Intro = () => (
         <a href="https://facebook.com">
           <img src={facebook} alt="Visítanos en Facebook" />
         </a>
-        <a href="https://twitter.com">
-          <img src={twitter} alt="Visítanos en Twitter" />
-        </a>
-        <a href="https://youtube.com">
-          <img src={youtube} alt="Visítanos en Youtube" />
+        <a href="https://instagram.com">
+          <img src={instagram} alt="Visítanos en Instagram" />
         </a>
       </div>
     </div>
     <div className="text-box">
-      <p>Medicina Fetal México</p>
-      <h1>Salvando vidas antes del nacimiento</h1>
-      <Link to="/contacto" className="button button-cta">Contáctanos</Link>
+      <p>Fundación Medicina Fetal México</p>
+      <h1>Nuestra misión es preservar la salud</h1>
+      <Link to="/contacto" className="button button-cta">Conoce más</Link>
     </div>
     
   </section>

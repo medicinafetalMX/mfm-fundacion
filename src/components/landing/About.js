@@ -10,11 +10,11 @@ const About = () => (
       <div className="row">
         <img src={surgeon} alt="" className="image-content" />
         <div className="column content-box">
-          <PrimaryHeader title="Expertos en diagnóstico prenatal avanzado" />
+          <PrimaryHeader title="Investigación que salva vidas" />
           <p>
-            Proporcionamos atención integral avanzada para el cuidado de la salud y seguridad tanto de la madre como del bebé en vida fetal, por medio de la última tecnología y de nuestro personal altamente calificado.
+            Una de nuestros objetos sociales es realizar investigación, lo cual nos permite estar a la vanguardia en los temas de medicina fetal, así como apoyar a nuestros médicos investigadores a crear conocimiento nuevo.
           </p>
-          <PrimaryLink toPage="/medicinafetalmexico" text="Acerca de Medicina Fetal México" />
+          <PrimaryLink toPage="/medicinafetalmexico" text="Ir a Investigación" />
         </div>
       </div>
     </div>

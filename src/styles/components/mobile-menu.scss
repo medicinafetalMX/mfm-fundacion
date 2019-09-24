@@ -1,0 +1,28 @@
+.mobile-menu{
+  width: 100vw;
+  height: calc(100vh - var(--header-height));
+  position: fixed;
+  left: 0;
+  top: 100px;
+  background-color: var(--color-primary);
+  z-index: 90;
+  .white-box{
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+    background-color: #fff;
+    z-index: 91;
+
+    display: flex;
+    flex-direction: column;
+    a{
+      color: var(--color-secondary);
+      text-decoration: none;
+      font-size: 20px;
+      margin: 0.75rem;
+      padding-left: 2rem;
+      &:first-of-type{
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}
