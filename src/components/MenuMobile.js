@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import { TimelineLite, Power3 } from "gsap";
+import { TimelineLite, Power3, TweenLite } from "gsap";
 
 class MenuMobile extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class MenuMobile extends Component {
     this.animation
       .from(this.bgOne, 0.6, { height: 0, ease: Power3.easeOut })
       .from(this.bgTwo, 0.6, { height: 0, delay: -0.5 })
-      .staggerFrom(this.links, 0.3, { opacity: 0, y: -40 }, 0.2);
+      .staggerFrom(this.links, 0.3, { autoAlpha: 0, opacity: 0, y: -40 }, 0.2);
   }
 
   componentDidUpdate(prevProps) {
@@ -44,15 +44,16 @@ class MenuMobile extends Component {
     return (
       <div className="mobile-menu" ref={div => this.bgOne = div}>
         <div className="white-box" ref={div => this.bgTwo = div}>
-          <Link to="/" className="menu-link" ref={a => this.links.push(a)}>Inicio</Link>
-          <Link to="/" ref={a => this.links.push(a)}>Educación</Link>
-          <Link to="/" ref={a => this.links.push(a)}>Investigación</Link>
-          <Link to="/" ref={a => this.links.push(a)}>Labor Social</Link>
-          <Link to="/" ref={a => this.links.push(a)}>Neurodesarrollo</Link>
-          <Link to="/" className="menu-link" ref={a => this.links.push(a)}>Mi Embarazo</Link>
-          <Link to="/" className="menu-link" ref={a => this.links.push(a)}>Eventos</Link>
-          <Link to="/" className="menu-link" ref={a => this.links.push(a)}>Foros</Link>
-          <Link to="/" className="menu-link" ref={a => this.links.push(a)}>Conócenos</Link>
+          <Link to="/" ref={a => this.links.push(a)}>Inicio</Link>
+          <Link to="/conocenos" ref={a => this.links.push(a)}>Conócenos</Link>
+          <Link to="/educacion" ref={a => this.links.push(a)}>Educación</Link>
+          <Link to="/investigacion" ref={a => this.links.push(a)}>Investigación</Link>
+          <Link to="/laborsocial" ref={a => this.links.push(a)}>Labor Social</Link>
+          <Link to="/neurodesarrollo" ref={a => this.links.push(a)}>Neurodesarrollo</Link>
+          <Link to="/miembarazo" ref={a => this.links.push(a)}>Mi Embarazo</Link>
+          <Link to="/eventos" ref={a => this.links.push(a)}>Eventos</Link>
+          <Link to="/foro" ref={a => this.links.push(a)}>Foro</Link>
+          <Link to="/apoya" ref={a => this.links.push(a)}>Cómo Apoyar</Link>
         </div>
       </div>
     )

@@ -21,16 +21,22 @@ ul{
   list-style: none;
   font-family: var(--font-headers);
   font-weight: bold;
-  margin: 4em 0;
+  margin: 3em 0;
   li{
-    color: var(--color-primary);
+    color: var(--color-secondary);
     &::before{
       content: "\2022";
-      color: var(--color-secondary);
+      color: var(--color-primary);
       font-weight: bold;
       display: inline-block;
       width: 10px;
       margin-right: 1em;
+    }
+    .date{
+      padding-left: 26px;
+      font-family: 'Muli';
+      color: #424242;
+      font-weight: lighter;
     }
   }
 }

@@ -1,0 +1,15 @@
+.section-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin-bottom: 10px;
+  }
+  hr{
+    height: 5px;
+    width: 48px;
+    margin-bottom: 40px;
+    background-color: var(--color-primary);
+  }
+}

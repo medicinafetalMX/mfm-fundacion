@@ -41,12 +41,16 @@ header{
         opacity: 1;
         color: var(--color-primary);
       }
+      &:last-of-type{
+        margin-right: 0;
+      }
     }
 
     .drop-menu{
       position: relative;
       display: flex;
       width: auto;
+      margin-right: 1.7rem;
       &:hover .drop-content{
         visibility: visible;
         opacity: 1;
@@ -106,7 +110,7 @@ header{
 
   }
   .menu-control{
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
@@ -138,6 +142,7 @@ header{
       display: none;
     }
     .menu-control{
+      display: flex;
       .menu-label{
         display: flex;
       }

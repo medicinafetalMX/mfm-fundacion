@@ -33,16 +33,17 @@ class Header extends Component {
             <button className="drop-button menu-link">Acerca de</button>
             <div className="drop-content">
               <div className="top-line" />
-              <Link to="/">Educación</Link>
-              <Link to="/">Investigación</Link>
-              <Link to="/">Labor Social</Link>
-              <Link to="/">Neurodesarrollo</Link>
+              <Link to="/conocenos">La Fundación</Link>
+              <Link to="/educacion">Educación</Link>
+              <Link to="/investigacion">Investigación</Link>
+              <Link to="/laborsocial">Labor Social</Link>
+              <Link to="/neurodesarrollo">Neurodesarrollo</Link>
             </div>
           </div>
-          <Link to="/" className="menu-link">Mi Embarazo</Link>
-          <Link to="/" className="menu-link">Eventos</Link>
-          <Link to="/" className="menu-link">Foros</Link>
-          <Link to="/" className="menu-link">Conócenos</Link>
+          <Link to="/miembarazo" className="menu-link">Mi Embarazo</Link>
+          <Link to="/eventos" className="menu-link">Eventos</Link>
+          <Link to="/foro" className="menu-link">Foro</Link>
+          <Link to="/apoya" className="menu-link">Cómo Apoyar</Link>
         </div>
         <MenuHamburger
           isMenuOpen={this.state.isMenuOpen}

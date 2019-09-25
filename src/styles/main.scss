@@ -22,6 +22,9 @@
 @import "components/imageLink.scss";
 @import "components/lists.scss";
 @import "components/storyCards.scss";
+@import "components/section-header.scss";
+@import "components/section-body.scss";
+@import "components/image-grid.scss";
 
 /* PAGES */
 
@@ -31,6 +34,11 @@
 @import "pages/landing/history.scss";
 @import "pages/landing/procedures.scss";
 @import "pages/landing/contact.scss";
+@import "pages/education.scss";
+@import "pages/investigation.scss";
+@import "pages/pregnancy.scss";
+@import "pages/about.scss";
+@import "pages/support.scss";
 
 /* GENERAL STYLES */
 
