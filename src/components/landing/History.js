@@ -2,7 +2,7 @@ import React from "react"
 import PrimaryHeader from "../primaryHeader"
 import PrimaryLink from "../primaryLink"
 
-import image from "../../images/surgeon2.png"
+import image from "../../images/home/quirofano.jpg"
 
 const HistoryBlock = () => (
   <section className="history">

@@ -2,7 +2,7 @@ import React from "react"
 import PrimaryHeader from "../primaryHeader"
 import PrimaryLink from "../primaryLink"
 
-import surgeon from "../../images/surgeon1.png"
+import surgeon from "../../images/home/eco.jpg"
 
 const About = () => (
   <section className="about">

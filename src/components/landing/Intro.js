@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React, { Component } from "react";
 import { TimelineLite } from "gsap";
 
-import cover from "../../images/intro.jpeg"
+import cover from "../../images/home/baby.jpg"
 import facebook from "../../images/facebook.svg"
 import instagram from "../../images/instagram.svg"
 
