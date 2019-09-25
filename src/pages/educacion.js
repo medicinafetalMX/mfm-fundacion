@@ -6,7 +6,7 @@ import PrimaryHeader from "../components/primaryHeader";
 
 import hero from "../images/educacion/cursos.jpg";
 import img1 from "../images/educacion/residentes.jpg";
-import img2 from "../images/educacion/invasivos.jpg";
+import img2 from "../images/educacion/Invasivos.jpg";
 import img3 from "../images/educacion/becado.jpg";
 
 const EducationPage = () => (
