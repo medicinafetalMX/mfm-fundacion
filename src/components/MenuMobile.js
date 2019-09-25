@@ -20,7 +20,7 @@ class MenuMobile extends Component {
     this.animation
       .from(this.bgOne, 0.6, { height: 0, ease: Power3.easeOut })
       .from(this.bgTwo, 0.6, { height: 0, delay: -0.5 })
-      .staggerFrom(this.links, 0.3, { autoAlpha: 0, opacity: 0, y: -40 }, 0.2);
+      .staggerFrom(this.links, 0.3, { autoAlpha: 0, opacity: 0, y: -40 }, 0.07);
   }
 
   componentDidUpdate(prevProps) {

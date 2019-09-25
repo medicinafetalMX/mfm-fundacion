@@ -1,14 +1,10 @@
-.education-page{
-  ul{
-    margin-top: 3em;
-    li{
-      margin-bottom: 1.5rem;
-    }
-  }
+.social-labor-page{
+
 }
 
 @media only screen and (max-width: 768px) {
-  .education-page{
+  .social-labor-page,
+  .neuro-page{
     .hero-image{
       height: 260px;
       img{

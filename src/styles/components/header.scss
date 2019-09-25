@@ -138,6 +138,9 @@ header{
 
 @media only screen and (max-width: 875px) {
   header{
+    .logo{
+      width: 150px;
+    }
     .menu{
       display: none;
     }

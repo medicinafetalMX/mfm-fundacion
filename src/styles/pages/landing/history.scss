@@ -22,3 +22,24 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .history {
+    padding-bottom: 0;
+    .content-screen{
+      h2{
+        width: 80%;
+      }
+      .row{
+        flex-direction: column;
+        .content-box{
+          width: 100%;
+        }
+        .image-content{
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

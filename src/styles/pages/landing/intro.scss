@@ -20,6 +20,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
       img{
         width: 100%;
         height: 100%;
@@ -68,4 +69,32 @@
 @keyframes slide-in{
   0% { width: 0;}
   100% { width: 50%; padding: 0 2em 0 12%; }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro{
+    flex-direction: column;
+    .blank-box{
+      width: 100%;
+      justify-content: center;
+      .cover{
+        width: 100%;
+        padding-top: 0;
+        height: 50vh;
+        top: 0;
+      }
+      .social-media-container{
+        display: none;
+      }
+    }
+    .text-box{
+      width: 100%;
+      justify-content: flex-end;
+      padding: 0 7% 50px 7%;
+      h1{
+        font-size: 1.8em;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }

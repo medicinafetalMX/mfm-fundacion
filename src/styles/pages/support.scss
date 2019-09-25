@@ -21,3 +21,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .support-page{
+    .button-container{
+      flex-direction: column;
+      .button{
+        &:first-of-type{
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}

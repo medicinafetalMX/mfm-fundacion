@@ -13,3 +13,20 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .about{
+    margin: 10vh auto;
+    margin-bottom: 12vh;
+    .row{
+      flex-direction: column-reverse;
+      .content-box{
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+      .image-content{
+        width: 80%;
+      }
+    }
+  }
+}
