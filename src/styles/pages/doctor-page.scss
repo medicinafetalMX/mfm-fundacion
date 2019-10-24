@@ -1,0 +1,27 @@
+.doctor-page {
+  .doctor-profile {
+    display: flex;
+    align-items: flex-start;
+    img {
+      width: 240px;
+      height: auto;
+      margin-right: 1.5rem;
+    }
+  }
+  .center-profile {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .doctor-page {
+    .doctor-profile {
+      flex-direction: column;
+      justify-content: center;
+      img {
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

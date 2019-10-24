@@ -1,15 +1,15 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css?family=Muli:300|Roboto+Slab:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli:300|Roboto+Slab:400,700&display=swap");
 
 /* VARIABLES */
 
-:root{
+:root {
   --color-primary: #f5b4c8;
   --color-secondary: #eb7095;
   --clear-background: #fbf4f6;
-  --font-headers: 'Roboto Slab', serif;
-  --font-body: 'Muli', sans-serif;
+  --font-headers: "Roboto Slab", serif;
+  --font-body: "Muli", sans-serif;
   --header-height: 100px;
 }
 
@@ -25,6 +25,7 @@
 @import "components/section-header.scss";
 @import "components/section-body.scss";
 @import "components/image-grid.scss";
+@import "components/doctor-card.scss";
 
 /* PAGES */
 
@@ -40,46 +41,52 @@
 @import "pages/about.scss";
 @import "pages/support.scss";
 @import "pages/social-labor.scss";
+@import "pages/doctor-page.scss";
 
 /* GENERAL STYLES */
 
-body{
+body {
   font-family: var(--font-body);
   font-size: 18px;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-headers);
 }
 
-a{
+a {
   font-family: var(--font-headers);
 }
 
-.App{
+.App {
   visibility: hidden;
 }
 
-.full-screen{
+.full-screen {
   width: 100%;
 }
 
-.content-screen{
+.content-screen {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: column;
 }
 
-.site-content{
+.site-content {
   padding-top: var(--header-height);
 }

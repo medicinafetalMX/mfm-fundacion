@@ -1,30 +1,30 @@
-ol{
+ol {
   margin: 2em 0;
   font-family: var(--font-headers);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-weight: bold;
   list-style: none;
   counter-reset: li;
-  li{
+  li {
     counter-increment: li;
   }
-  li::before{
+  li::before {
     content: counter(li);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     margin-right: 1em;
     width: 10px;
     display: inline-block;
   }
 }
 
-ul{
+ul {
   list-style: none;
   font-family: var(--font-headers);
   font-weight: bold;
   margin: 3em 0;
-  li{
+  li {
     color: var(--color-secondary);
-    &::before{
+    &::before {
       content: "\2022";
       color: var(--color-primary);
       font-weight: bold;
@@ -32,9 +32,9 @@ ul{
       width: 10px;
       margin-right: 1em;
     }
-    .date{
+    .date {
       padding-left: 26px;
-      font-family: 'Muli';
+      font-family: "Muli";
       color: #424242;
       font-weight: lighter;
     }
@@ -42,15 +42,15 @@ ul{
 }
 
 @media only screen and (max-width: 768px) {
-  ul{
-    li{
+  ul {
+    li {
       margin-bottom: 1.5rem;
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         margin-right: 0;
         width: 0;
       }
-      .date{
+      .date {
         padding-left: 0;
       }
     }
