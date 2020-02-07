@@ -5,9 +5,12 @@ ol {
   font-weight: bold;
   list-style: none;
   counter-reset: li;
+
   li {
     counter-increment: li;
+    display: flex;
   }
+
   li::before {
     content: counter(li);
     color: var(--color-primary);
@@ -22,8 +25,11 @@ ul {
   font-family: var(--font-headers);
   font-weight: bold;
   margin: 3em 0;
+
   li {
     color: var(--color-secondary);
+    display: flex;
+
     &::before {
       content: "\2022";
       color: var(--color-primary);
@@ -32,6 +38,7 @@ ul {
       width: 10px;
       margin-right: 1em;
     }
+
     .date {
       padding-left: 26px;
       font-family: "Muli";
@@ -45,11 +52,13 @@ ul {
   ul {
     li {
       margin-bottom: 1.5rem;
+
       &::before {
         content: "";
         margin-right: 0;
         width: 0;
       }
+
       .date {
         padding-left: 0;
       }

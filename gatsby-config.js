@@ -27,9 +27,17 @@ module.exports = {
         icon: `src/images/mfmf-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `x58qqj5aoiri`,
+        accessToken: `BcxHbN2ZTqugjfmm5egK_p-G5FUZQ_hupxRzh97nfW0`,
+        downloadLocal: true,
+      },
+    },
   ],
 }

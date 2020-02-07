@@ -10,7 +10,7 @@ class RogelioCruz extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Dr. Rogelio Cruz" />
+        <SEO title={"Dr. Rogelio Cruz"} />
         <div className="content-body doctor-page">
           <SectionTitle title="Dr. Rogelio Cruz" />
           <div className="doctor-profile row">
@@ -92,20 +92,20 @@ class RogelioCruz extends Component {
             En 2010 y 2011 recibe de manera consecutiva el premio a la mejor presentación oral “Free Communication Award” en el congreso mundial de la Sociedad Internacional de Ultrasonido en Ginecología y Obstetricia ISUOG en Octubre 2010 en Praga, República Checa y en Los Angeles, California, USA
           </p>
           <p>
-            En 2013, recibe el nombramiento de “Miembro Honorario” de la Sociedad Peruana de Obstetricia y Ginecología y en Mayo 2014 recibe el mismo nombramiento de “Miembro Honorario” la Federación Colombiana de Obstetricia y Ginecología (FECOLSOG) al distinguirlo como un ejemplo de vida y profesionalismo en esta especialidad. 
+            En 2013, recibe el nombramiento de “Miembro Honorario” de la Sociedad Peruana de Obstetricia y Ginecología y en Mayo 2014 recibe el mismo nombramiento de “Miembro Honorario” la Federación Colombiana de Obstetricia y Ginecología (FECOLSOG) al distinguirlo como un ejemplo de vida y profesionalismo en esta especialidad.
           </p>
           <p>
-            En Septiembre 2015 recibe el reconocimiento de Discovery Chanel por su trayectoria en el desarrollo de la cirugía fetal dentro del proyecto “Celebrando México 2015”. 
+            En Septiembre 2015 recibe el reconocimiento de Discovery Chanel por su trayectoria en el desarrollo de la cirugía fetal dentro del proyecto “Celebrando México 2015”.
           </p>
           <p>
             En Mayo 2019 recibe el nombramiento de “Maestro Iberoamericano del Diagnóstico y Tratamiento Prenatal” por la Sociedad Iberoamericana (SIADTP) en la ciudad de Guatemala.
           </p>
           <p>
-            En Junio 2019 obtiene el premio Alejandrina (primer lugar en la Modalidad de Joven Talento a la Investigación) que otorga la Universidad Autónoma de Querétaro. 
+            En Junio 2019 obtiene el premio Alejandrina (primer lugar en la Modalidad de Joven Talento a la Investigación) que otorga la Universidad Autónoma de Querétaro.
           </p>
           <br/>
           <br/>
-          
+
         </div>
       </Layout>
     )
