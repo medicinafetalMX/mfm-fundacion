@@ -1,23 +1,30 @@
-.education-page{
-  ul{
+.education-page {
+  ul {
     margin-top: 3em;
-    li{
+
+    li {
       margin-bottom: 1.5rem;
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .education-page{
-    .hero-image{
+  .education-page {
+    .hero-image {
       height: 260px;
-      img{
+
+      img {
         height: 100%;
       }
     }
-    ul{
-      li{
+
+    ul {
+      li {
         margin-bottom: 3rem;
+
+        &>b {
+          color: black
+        }
       }
     }
   }
