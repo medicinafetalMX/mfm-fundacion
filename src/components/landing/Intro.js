@@ -6,7 +6,7 @@ import cover from "../../images/home/baby.jpg"
 import facebook from "../../images/facebook.svg"
 import instagram from "../../images/instagram.svg"
 
-class Intro extends Component{
+class Intro extends Component {
   constructor(props) {
     super(props);
 

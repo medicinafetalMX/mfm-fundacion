@@ -14,7 +14,7 @@ const options = {
 }
 
 export default function DoctorsTemplate({ data: { doctor } }) {
-  console.log(doctor)
+
   const about = documentToReactComponents(doctor.about.json)
   const experience = documentToReactComponents(doctor.experience.json)
   const medicalPartnerships = documentToReactComponents(
