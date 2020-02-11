@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
 import logo from "../images/mfmflogo.png";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 const AboutPage = ({ data: { content } }) => {
   const about = documentToReactComponents(content.content.json);
   return (
