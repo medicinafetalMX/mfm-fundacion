@@ -3,31 +3,59 @@ import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PrimaryHeader from "../components/primaryHeader";
+import { graphql } from "gatsby";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import hero from "../images/ultrasound.jpg";
+const SocialLaborPage = ({ data }) => {
+  const datos = data.labor.edges;
 
-const SocialLaborPage = () => (
-  <Layout>
-    <SEO title="Labor Social" />
-    <div className="content-body social-labor-page">
-      <SectionTitle title="Labor Social" />
-      <div className="hero-image">
-        <img src={hero} alt="Fotografía de Curso MFM" />
+  return (
+    <Layout>
+      <SEO title="Labor Social" />
+      <div className="content-body social-labor-page">
+        <SectionTitle title="Labor Social" />
+        <div className="hero-image">
+          {datos.map(({ node }) => (
+            <img src={node.head.file.url} alt="Fotografía de Curso MFM" />
+          ))}
+        </div>
+        {datos.map(({ node }) => (
+          <p>
+            {documentToReactComponents(node.content.json)}
+          </p>
+        ))}
+        <br />
+        <PrimaryHeader title="Lo que ofrecemos" />
+        {datos.map(({ node }) => (
+          <div>
+            {documentToReactComponents(node.lista.json)}
+          </div>
+        ))}
       </div>
-      <p>
-        En nuestra fundación ofrecemos ultrasonidos avanzados Gratuitos para que todas las mujeres embarazadas tengan la oportunidad de ver a su bebé en una alta resolución y que puedan tener un embarazo tranquilo y saludable. 
-      </p>
-      <br/>
-      <PrimaryHeader title="Lo que ofrecemos" />
-      <ul>
-        <li>Tamizaje de primer trimestre: entre las 11 y catorce semanas de gestación.</li>
-        <li>Ecografía estructural : 20- 24 semanas de gestación</li>
-        <li>Bienestar fetal: 32- 34 semanas de gestación</li>
-        <li>Apoyo para realizar estudio genético</li>
-        <li>Apoyo para realizar Cirugía Fetal</li>
-      </ul>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default SocialLaborPage;
+
+export const query = graphql`
+  {
+    labor: allContentfulLaborsocial {
+      edges {
+        node {
+          content {
+            json
+          }
+          head {
+            file {
+              url
+            }
+          }
+          lista {
+            json
+          }
+        }
+      }
+    }
+  }
+`

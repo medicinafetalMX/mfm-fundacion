@@ -7,7 +7,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const NeuroPage = ({ data }) => {
   const datos = data.neuro.edges;
-  console.log(data);
 
   return (
     <Layout>
