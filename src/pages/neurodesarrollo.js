@@ -15,26 +15,26 @@ const NeuroPage = ({ data }) => {
 
         <SectionTitle title="Neurodesarrollo" />
         <div className="hero-image">
-          {datos.map(({ node }) => (
+          {datos.map(({ node }, index) => (
 
-            <img src={node.head.file.url} alt="Neurodesarrollo" />
+            <img key={index} src={node.head.file.url} alt="Neurodesarrollo" />
 
           ))}
         </div>
-        {datos.map(({ node }) => (
-          <p>
+        {datos.map(({ node }, index) => (
+          <div key={index}>
             {documentToReactComponents(node.content.json)}
-          </p>
+          </div>
         ))}
         <div className="image-grid">
           <div className="image-container">
-            {datos.map(({ node }) => (
-              <img src={node.image1.file.url} alt="Neurodesarrollo" />
+            {datos.map(({ node }, index) => (
+              <img key={index} src={node.image1.file.url} alt="Neurodesarrollo" />
             ))}
           </div>
           <div className="image-container">
-            {datos.map(({ node }) => (
-              <img src={node.image2.file.url} alt="Neurodesarrollo" />
+            {datos.map(({ node }, index) => (
+              <img key={index} src={node.image2.file.url} alt="Neurodesarrollo" />
             ))}
           </div>
         </div>

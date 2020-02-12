@@ -13,7 +13,7 @@ const AboutPage = ({ data: { content } }) => {
       <div className="content-body about-page">
         <SectionTitle title="Conócenos" />
 
-        <p>{about}</p>
+        <>{about}</>
 
         <div className="row">
           <img className="logo" src={logo} alt="Fundación Medicina Fetal México" />

@@ -16,13 +16,13 @@ const SupportPage = ({ data }) => {
       <SEO title="Cómo apoyar" />
       <div className="content-body support-page">
         <SectionTitle title="Cómo apoyar" />
-        {datos.map(({ node }) => (
-          <p>
+        {datos.map(({ node }, index) => (
+          <p key={index}>
             {documentToReactComponents(node.descripcion.json)}
           </p>
         ))}
-        {datos.map(({ node }) => (
-          <p>
+        {datos.map(({ node }, index) => (
+          <p key={index}>
             ¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>{node.correo}</a> o llámanos al {node.telefono}.
 
           </p>
@@ -30,8 +30,8 @@ const SupportPage = ({ data }) => {
 
 
         <div className="row button-container">
-          {datos.map(({ node }) => (
-            <div>
+          {datos.map(({ node }, index) => (
+            <div key={index}>
               <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
               <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
             </div>
