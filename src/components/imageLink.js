@@ -1,9 +1,9 @@
 import React from "react"
 
 const ImageLink = (props) => (
-  <a href={props.url} className="image-link">
-    <img src={props.image} alt={props.altText}/>
-  </a>
+  <div className="image-link">
+    <img src={props.image} alt={props.ltText} />
+    <h4>{props.ltText}</h4>
+  </div>
 )
-
 export default ImageLink
