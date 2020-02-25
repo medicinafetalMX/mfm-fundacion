@@ -15,19 +15,19 @@ const SocialLaborPage = ({ data }) => {
       <div className="content-body social-labor-page">
         <SectionTitle title="Labor Social" />
         <div className="hero-image">
-          {datos.map(({ node }) => (
-            <img src={node.head.file.url} alt="Fotografía de Curso MFM" />
+          {datos.map(({ node }, index) => (
+            <img key={index} src={node.head.file.url} alt="Fotografía de Curso MFM" />
           ))}
         </div>
-        {datos.map(({ node }) => (
-          <p>
+        {datos.map(({ node }, index) => (
+          <div key={index}>
             {documentToReactComponents(node.content.json)}
-          </p>
+          </div>
         ))}
         <br />
         <PrimaryHeader title="Lo que ofrecemos" />
-        {datos.map(({ node }) => (
-          <div>
+        {datos.map(({ node }, index) => (
+          <div key={index}>
             {documentToReactComponents(node.lista.json)}
           </div>
         ))}

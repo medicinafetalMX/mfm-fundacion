@@ -16,22 +16,25 @@ const SupportPage = ({ data }) => {
       <SEO title="Cómo apoyar" />
       <div className="content-body support-page">
         <SectionTitle title="Cómo apoyar" />
-        {datos.map(({ node }) => (
-          <p>
-            {documentToReactComponents(node.descripcion.json)}
+        {datos.map(({ node }, index) => (
+          <>
+            <p key={index}>
+              {documentToReactComponents(node.descripcion.json)}
+            </p>
+            <p><b>Nombre de la fundación: </b>{node.nombreFundacion}</p>
+            <p><b>Banco: </b>{node.banco}</p>
+            <p><b>No. Cuenta: </b>{node.cuenta}</p>
+            <p><b>CLABE: </b>{node.clabe}</p>
+            <p>
+              ¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>{node.correo}</a> o llámanos al {node.telefono}.
           </p>
-        ))}
-        {datos.map(({ node }) => (
-          <p>
-            ¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>{node.correo}</a> o llámanos al {node.telefono}.
-
-          </p>
+          </>
         ))}
 
 
         <div className="row button-container">
-          {datos.map(({ node }) => (
-            <div>
+          {datos.map(({ node }, index) => (
+            <div key={index}>
               <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
               <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
             </div>
@@ -63,11 +66,15 @@ export const query = graphql`
     apoya: allContentfulApoya {
       edges {
         node {
+          correo
           descripcion {
             json
           }
-          correo
           telefono
+          banco
+          clabe
+          cuenta
+          nombreFundacion
         }
       }
     }

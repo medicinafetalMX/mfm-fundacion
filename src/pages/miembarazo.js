@@ -14,7 +14,7 @@ const PregnancyPage = ({ data: { articles } }) => {
         <SectionTitle title="Mi Embarazo" />
 
         {articlesList.map(({ node: article }, index) => (
-          <div className="row">
+          <div key={index} className="row">
             <img src={article.picture.file.url} alt={article.title} />
             <div className="content">
               <p>{article.description}</p>
