@@ -9,6 +9,7 @@ import Institutions from "../components/landing/Institutions";
 import "../styles/main.scss";
 import PrimaryHeader from "../components/primaryHeader"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { graphql } from 'gatsby'
 const IndexPage = ({ data }) => {
   const datos = data.convenios.edges
   const apoya = data.apoya.edges
@@ -38,10 +39,6 @@ const IndexPage = ({ data }) => {
         <div key={index}>
           <ContactSection
             description={documentToReactComponents(node.descripcion.json)}
-            fundacion={node.nombreFundacion}
-            banco={node.banco}
-            cuenta={node.cuenta}
-            clabe={node.clabe}
             tel={node.telefono}
             email={node.correo}
           />

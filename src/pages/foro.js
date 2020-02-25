@@ -21,7 +21,7 @@ const ForumPage = ({ data }) => {
     <Layout>
       <SEO title="Foro" />
       <div className="content-body about-page">
-        <SectionTitle title="Foro" />
+        <SectionTitle title="Foro" style={{ margin: 'none' }} />
         <Accordion allowZeroExpanded={true}>
           {datos.map(({ node }, index) => (
             <AccordionItem key={index}>
@@ -38,6 +38,21 @@ const ForumPage = ({ data }) => {
             </AccordionItem>
           ))}
         </Accordion>
+        <div>
+          <br />
+          <SectionTitle title="Contáctanos" />
+          <form action="https://formsubmit.co/emmanuelestrada544@gmail.com" method="POST">
+
+            <input className="form-styling" type="text" name="Nombre" placeholder="Nombre completo" required />
+            <input className="form-styling" type="email" name="Email" placeholder="Correo electrónico" required />
+            <textarea className="form-styling" name="Pregunta" placeholder="Déjanos tu pregunta" style={{ height: '120px' }} required></textarea>
+            <input type="hidden" name="_template" value="box"></input>
+            <div className="button-container">
+              <center><button type="submit" className="button button-cta">Enviar</button></center>
+            </div>
+          </form>
+        </div>
+
       </div>
     </Layout>
   )
