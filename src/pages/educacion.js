@@ -29,7 +29,7 @@ const EducationPage = ({ data: { educationPage } }) => {
     <Layout>
       <SEO title="Educación" />
       <div className="content-body education-page">
-        <SectionTitle title="Educación" />
+        <SectionTitle title="Educación" color="#003a81" />
         <div className="hero-image">
           <img
             src={educationPage.cover.fluid.src}
@@ -37,7 +37,7 @@ const EducationPage = ({ data: { educationPage } }) => {
           />
         </div>
         {content}
-        <PrimaryHeader title="Oferta Educativa 2020" />
+        <PrimaryHeader title="Oferta Educativa 2020" color="#003a81" />
         <p>Esta es nuestra oferta de cursos, talleres y posgrados:</p>
         <div className="courses-list">
           <ul>{academicOffer}</ul>

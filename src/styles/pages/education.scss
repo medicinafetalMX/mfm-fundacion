@@ -4,6 +4,13 @@
 
     li {
       margin-bottom: 1.5rem;
+      display: flex;
+      p {
+        color: #003a81;
+      }
+    }
+    li:before {
+      color: #003a81;
     }
   }
 }
@@ -22,8 +29,8 @@
       li {
         margin-bottom: 3rem;
 
-        &>b {
-          color: black
+        & > b {
+          color: black;
         }
       }
     }

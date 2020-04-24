@@ -1,11 +1,9 @@
 import React from "react"
 
-const Header = (props) => (
+const Header = props => (
   <h2 className="main-header">
-    <hr/>
-    <div>
-      {props.title}
-    </div>
+    <hr style={{ background: props.color }} />
+    <div>{props.title}</div>
   </h2>
 )
 
