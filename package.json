@@ -25,6 +25,7 @@
     "react": "^16.8.6",
     "react-accessible-accordion": "^3.0.1",
     "react-dom": "^16.8.6",
+    "react-grid-carousel": "^1.0.1",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {

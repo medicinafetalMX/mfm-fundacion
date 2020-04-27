@@ -1,15 +1,15 @@
-import React from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Intro from "../components/landing/Intro";
-import About from "../components/landing/About";
-import HistoryBlock from "../components/landing/History";
-import ContactSection from "../components/landing/ContactSection";
-import Institutions from "../components/landing/Institutions";
-import "../styles/main.scss";
+import React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Intro from "../components/landing/Intro"
+import About from "../components/landing/About"
+import HistoryBlock from "../components/landing/History"
+import ContactSection from "../components/landing/ContactSection"
+import Institutions from "../components/landing/Institutions"
+import "../styles/main.scss"
 import PrimaryHeader from "../components/primaryHeader"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { graphql } from 'gatsby'
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { graphql } from "gatsby"
 const IndexPage = ({ data }) => {
   const datos = data.convenios.edges
   const apoya = data.apoya.edges
@@ -19,6 +19,17 @@ const IndexPage = ({ data }) => {
 
       <Intro />
       <HistoryBlock />
+
+      <About />
+      {apoya.map(({ node }, index) => (
+        <div key={index}>
+          <ContactSection
+            description={documentToReactComponents(node.descripcion.json)}
+            tel={node.telefono}
+            email={node.correo}
+          />
+        </div>
+      ))}
       <section className="institutions">
         <div className="content-screen">
           <PrimaryHeader title="Contamos con el respaldo de diversas instituciones" />
@@ -34,16 +45,6 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <About />
-      {apoya.map(({ node }, index) => (
-        <div key={index}>
-          <ContactSection
-            description={documentToReactComponents(node.descripcion.json)}
-            tel={node.telefono}
-            email={node.correo}
-          />
-        </div>
-      ))}
     </Layout>
   )
 }
@@ -51,7 +52,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 export const query = graphql`
   {
-    convenios : allContentfulConvenios {
+    convenios: allContentfulConvenios {
       edges {
         node {
           imagen {

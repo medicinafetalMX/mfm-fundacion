@@ -7,7 +7,7 @@ import PrimaryHeader from "../components/primaryHeader"
 import { graphql } from "gatsby"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
+import Carousel from "react-grid-carousel"
 const options = {
   renderNode: {
     [BLOCKS.UL_LIST]: (node, children) => <>{children}</>,
@@ -24,17 +24,49 @@ const EducationPage = ({ data: { educationPage } }) => {
     educationPage.academicOffer.json,
     options
   )
-
+  const Span = () => (
+    <span
+      style={{
+        display: "none",
+      }}
+    ></span>
+  )
   return (
     <Layout>
       <SEO title="Educación" />
       <div className="content-body education-page">
         <SectionTitle title="Educación" color="#003a81" />
         <div className="hero-image">
-          <img
-            src={educationPage.cover.fluid.src}
-            alt="Fotografía de Curso MFM"
-          />
+          <Carousel
+            cols={1}
+            rows={1}
+            autoplay={5000}
+            arrowLeft={Span}
+            arrowRight={Span}
+            loop
+          >
+            <Carousel.Item>
+              <img
+                width="100%"
+                src={educationPage.cover.fluid.src}
+                alt="Fotografía de Curso MFM"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                width="100%"
+                src={educationPage.cover.fluid.src}
+                alt="Fotografía de Curso MFM"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                width="100%"
+                src={educationPage.cover.fluid.src}
+                alt="Fotografía de Curso MFM"
+              />
+            </Carousel.Item>
+          </Carousel>
         </div>
         {content}
         <PrimaryHeader title="Oferta Educativa 2020" color="#003a81" />
