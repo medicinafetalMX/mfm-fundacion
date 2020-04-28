@@ -16,6 +16,7 @@
 /* COMPONENTS */
 
 @import "components/header.scss";
+@import "components/footer.scss";
 @import "components/mobile-menu.scss";
 @import "components/buttons.scss";
 @import "components/headlines.scss";
@@ -102,4 +103,31 @@ a {
 
 .button {
   border: none;
+}
+.social-links {
+  padding: 10px 0;
+  display: flex;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 100%;
+  max-width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.white {
+  color: white;
 }
