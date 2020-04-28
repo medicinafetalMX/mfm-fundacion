@@ -1,7 +1,3 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
   siteMetadata: {
     title: `Medicina Fetal México`,
@@ -39,7 +35,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `psfzfnk414mo`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: "d3w6mn5_wLpMzYR8E1E33rLiE00yGd6f7__O0rYyLt8",
         downloadLocal: true,
       },
     },
