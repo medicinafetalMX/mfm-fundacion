@@ -5,8 +5,11 @@
   .button-container{
     justify-content: center;
     margin: 3rem auto;
+    display: flex;
     .button{
       margin: 0 1rem;
+      display: flex;
+      justify-content: center;
     }
   }
   .social-media-container{
@@ -20,9 +23,32 @@
       }
     }
   }
+  .images-container{
+    display: grid;
+    grid-gap: 10px;
+    margin: 3rem 0;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr) );
+    img{
+      filter: grayscale(1);
+      opacity: 0.3;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .support-page{
+    .button-container{
+      flex-direction: column;
+      .button{
+        &:first-of-type{
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 410px) {
   .support-page{
     .button-container{
       flex-direction: column;
