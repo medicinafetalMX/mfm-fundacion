@@ -1,14 +1,14 @@
-import React from "react";
-import SectionTitle from "../components/SectionTitle";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { graphql } from "gatsby";
-import logo from "../images/mfmflogo.png";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import React from "react"
+import SectionTitle from "../components/SectionTitle"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { graphql } from "gatsby"
+import logo from "../images/mfmflogo.png"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 const AboutPage = ({ data }) => {
   const about = data.content.edges
   return (
-    < Layout >
+    <Layout>
       <SEO title="Conócenos" />
       <div className="content-body about-page">
         {about.map(({ node }, index) => (
@@ -17,22 +17,30 @@ const AboutPage = ({ data }) => {
             {documentToReactComponents(node.content.json)}
             <SectionTitle title="¿Quiénes somos?" />
             {documentToReactComponents(node.quienesSomos.json)}
+            <SectionTitle title="Misión" />
+            {documentToReactComponents(node.mision.json)}
+            <SectionTitle title="Visión" />
+            {documentToReactComponents(node.vision.json)}
             <SectionTitle title="¿Qué ofrecemos?" />
             {documentToReactComponents(node.queOfrecemos.json)}
           </div>
         ))}
         <div className="row">
-          <img className="logo" src={logo} alt="Fundación Medicina Fetal México" />
+          <img
+            className="logo"
+            src={logo}
+            alt="Fundación Medicina Fetal México"
+          />
         </div>
       </div>
-    </Layout >
+    </Layout>
   )
 }
-export default AboutPage;
+export default AboutPage
 
 export const conocenos = graphql`
   {
-    content : allContentfulFoundation {
+    content: allContentfulFoundation {
       edges {
         node {
           content {
@@ -42,6 +50,12 @@ export const conocenos = graphql`
             json
           }
           quienesSomos {
+            json
+          }
+          mision {
+            json
+          }
+          vision {
             json
           }
         }

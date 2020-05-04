@@ -18,7 +18,7 @@ const ContactSection = (props) => (
             ¡Contáctanos! Escribe un mail a
           <a className="secondary-link" href={`mailto:${props.email}?Subject=Nueva%20Pregunta`}> {props.email} </a>
             o llámanos al {props.tel}.
-        </p>
+          </p>
           <Link to="/apoya" className="button button-cta">Contáctanos</Link>
         </center>
       </div>
