@@ -19,19 +19,19 @@ class Intro extends Component {
     this.cta = null
     this.socialMedia = null
 
-    this.animation = new TimelineLite({ paused: true })
+    //this.animation = new TimelineLite({ paused: true })
   }
 
   componentDidMount() {
-    this.animation
-      .from(this.textBox, 1, { x: 200, width: 0 }, 1)
-      .from(this.imageBox, 0.75, { width: 0 }, 2)
-      .from(this.title, 0.5, { autoAlpha: 0, opacity: 0, y: -8 }, 3)
-      .from(this.header, 0.5, { autoAlpha: 0, opacity: 0, y: -8 }, 3.8)
-      .from(this.cta, 0.7, { autoAlpha: 0, opacity: 0 }, 4.25)
-      .from(this.socialMedia, 1, { opacity: 0, y: 20 }, 4.5)
+    // this.animation
+    //   .from(this.textBox, 1, { x: 200, width: 0 }, 1)
+    //   .from(this.imageBox, 0.75, { width: 0 }, 2)
+    //   .from(this.title, 0.5, { autoAlpha: 0, opacity: 0, y: -8 }, 3)
+    //   .from(this.header, 0.5, { autoAlpha: 0, opacity: 0, y: -8 }, 3.8)
+    //   .from(this.cta, 0.7, { autoAlpha: 0, opacity: 0 }, 4.25)
+    //   .from(this.socialMedia, 1, { opacity: 0, y: 20 }, 4.5)
 
-    this.animation.play()
+    //this.animation.play()
   }
 
   render() {
@@ -93,7 +93,7 @@ class Intro extends Component {
         <div className="text-box" ref={div => (this.textBox = div)}>
           <p ref={p => (this.title = p)}>Fundación Medicina Fetal México</p>
           <h1 ref={h1 => (this.header = h1)}>
-            Nuestra misión es preservar la salud
+            Nuestra misión es conservar la salud materna, prenatal, neonatal e infantil.
           </h1>
           <Link
             to="/conocenos"

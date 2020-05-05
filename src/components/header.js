@@ -38,8 +38,10 @@ class Header extends Component {
               <Link to="/investigacion">Investigación</Link>
               <Link to="/laborsocial">Labor Social</Link>
               <Link to="/neurodesarrollo">Neurodesarrollo</Link>
+              <Link to="/productividad">Productividad</Link>
             </div>
           </div>
+          <Link to="/compartim" className="menu-link">Proyecto Compartim</Link>
           <Link to="/miembarazo" className="menu-link">Mi Embarazo</Link>
           <Link to="/eventos" className="menu-link">Eventos</Link>
           <Link to="/foro" className="menu-link">Foro</Link>

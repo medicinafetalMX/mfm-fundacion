@@ -9,7 +9,9 @@ import Institutions from "../components/landing/Institutions"
 import "../styles/main.scss"
 import PrimaryHeader from "../components/primaryHeader"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import SupportCard from "../components/SupportCard"
+import SectionTitle from "../components/SectionTitle"
 const IndexPage = ({ data }) => {
   const datos = data.convenios.edges
   const apoya = data.apoya.edges
@@ -21,15 +23,13 @@ const IndexPage = ({ data }) => {
       <HistoryBlock />
 
       <About />
-      {apoya.map(({ node }, index) => (
-        <div key={index}>
-          <ContactSection
-            description={documentToReactComponents(node.descripcion.json)}
-            tel={node.telefono}
-            email={node.correo}
-          />
-        </div>
-      ))}
+      <div className="content-body support-page">
+        <SectionTitle title="Ayúdanos a apoyar" />
+        <SupportCard />
+        <br/>
+
+        <Link to="/apoya" className="button button-cta">Contáctanos</Link>
+      </div>
       <section className="institutions">
         <div className="content-screen">
           <PrimaryHeader title="Contamos con el respaldo de diversas instituciones" />

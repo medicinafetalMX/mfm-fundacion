@@ -1,55 +1,39 @@
-import React from "react";
+import React, { Fragment } from "react";
 import SectionTitle from "../components/SectionTitle";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import facebook from "../images/facebook.svg"
 import instagram from "../images/instagram.svg"
 import Institutions from "../components/landing/Institutions";
+import SupportCard from "../components/SupportCard";
 
 const SupportPage = ({ data }) => {
   const datos = data.apoya.edges;
   const redes = data.redes.edges;
   const convenios = data.convenios.edges
-  console.log(redes);
+
   return (
     <Layout>
       <SEO title="Cómo apoyar" />
       <div className="content-body support-page">
         <SectionTitle title="Cómo apoyar" />
-        {datos.map(({ node }, index) => (
-          <>
-            <p key={index}>
-              {documentToReactComponents(node.descripcion.json)}
-            </p>
-            <div className="donations-card">
-              <p><b>Nombre de la fundación: </b>{node.nombreFundacion}</p>
-              <p><b>Banco: </b>{node.banco}</p>
-              <p><b>No. Cuenta: </b>{node.cuenta}</p>
-              <p><b>CLABE: </b>{node.clabe}</p>
-            </div>
-            <p>
-              ¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>{node.correo}</a> o llámanos al {node.telefono}.
-          </p>
-          </>
-        ))}
-
+        <SupportCard />
 
         <div className="row button-container">
           {datos.map(({ node }, index) => (
-            <>
+            <Fragment key={index}>
               <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
               <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
-            </>
+            </Fragment>
           ))}
         </div>
         <br />
         <p>
           No olvides de seguirnos en nuestras redes sociales:
         </p>
-        {redes.map(({ node }) => (
-          <div className="social-media-container">
+        {redes.map(({ node }, index) => (
+          <div className="social-media-container" key={index}>
             <a href={`${node.facebook}`}>
               <img src={facebook} alt="Visítanos en Facebook" />
             </a>
