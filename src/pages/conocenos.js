@@ -25,7 +25,7 @@ const AboutPage = ({ data }) => {
             {documentToReactComponents(node.queOfrecemos.json)}
           </div>
         ))}
-        <div className="row">
+        <div className="column aifs">
           <img
             className="logo"
             src={logo}
