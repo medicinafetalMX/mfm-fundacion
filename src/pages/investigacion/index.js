@@ -15,12 +15,9 @@ const InvestigationPage = ({ data }) => {
       <div className="content-body investigation-page">
         <SectionTitle title="Investigación" />
         <p>
-          Una de nuestros objetos sociales es realizar investigación, lo cual
-          nos permite estar a la vanguardia en los temas de medicina fetal, así
-          como apoyar a nuestros médicos investigadores a crear conocimiento
-          nuevo.
+        En Fundación Medicina Fetal México, la investigación es uno de nuestros pilares más grandes y de mayor importancia, debido a que gracias a nuestra producción científica, los médicos investigadores de nuestro grupo son referentes a nivel mundial. Han creado nuevas técnicas de tratamiento siendo pioneros en algunas intervenciones fetales, demostrando también su empatía con las mujeres embarazadas de nuestro país.
         </p>
-        <p>Conoce a nuestros Investigadores:</p>
+        <p>Día con día ponen todo su empeño en mejorar la medicina fetal de México y el mundo, para poder ofrecer más y mejores opciones a nuestras pacientes, para que todos los niños lleguen a desarrollar su máximo potencial, por un mundo mejor.</p>
 
         <div className="doctors-grid">
           {researchers.map(({ node }, index) => (

@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
   const apoya = data.apoya.edges
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Inicio" />
 
       <Intro />
       <HistoryBlock />

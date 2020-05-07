@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  color: white;
-  background-color: var(--color-primary);
+  color: #424242;
+  background-color: #e6e6e6;
   columns: 2;
   padding-top: 6vh;
   padding-bottom: 50px;
@@ -21,7 +21,7 @@
         max-width: 200px;
       }
       a {
-        color: #ffffff;
+        color: #424242;
         text-decoration: none;
         &:nth-child(2n + 1) {
           font-weight: bold;
@@ -38,10 +38,10 @@
       }
       a.link {
         font-family: "Muli";
-        color: #ffffff;
+        color: #424242;
         text-decoration: none;
         &:visited {
-          color: #ffffff;
+          color: #424242;
         }
       }
     }
@@ -51,7 +51,9 @@
     top: 90%;
     width: 100%;
     display: flex;
-    border-bottom: 2px solid #ffffff;
+    border: none;
+    background-color: #424242;
+    height: 1px;
     margin: 1em 0;
   }
   .address {

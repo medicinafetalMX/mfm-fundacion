@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import IconFb from "../images/facebook-white.svg"
+import IconFb from "../images/facebook.svg"
 import SocialLink from "./SocialLink"
 const Footer = () => {
   return (
@@ -16,34 +16,31 @@ const Footer = () => {
               <Link className="link" to="/">
                 Inicio
               </Link>
-              <Link className="link" to="/trayectoria">
+              <Link className="link" to="/miembarazo">
                 Mi Embarazo
               </Link>
-              <Link className="link" to="/testimonios">
+              <Link className="link" to="/eventos">
                 Eventos
               </Link>
-              <Link className="link" to="/">
+              <Link className="link" to="/foro">
                 Foro
               </Link>
-              <Link className="link" to="/cirugia-fetal">
+              <Link className="link" to="/apoya">
                 Cómo apoyar
               </Link>
             </div>
             <div className="column">
               <h4>Conócenos</h4>
-              <Link className="link" to="/">
-                Cursos
+              <Link className="link" to="/compartim">
+                Proyecto Compartim
               </Link>
-              <Link className="link" to="/">
-                Calculadora
-              </Link>
-              <Link className="link" to="/">
+              <Link className="link" to="/investigacion">
                 Investigación
               </Link>
             </div>
             <div className="column" style={{}}>
               <h4>Enlaces</h4>
-              <a className="link" href="/">
+              <a className="link" href="https://medicinafetalmexico.com">
                 Fundacion MFM
               </a>
             </div>
@@ -60,7 +57,7 @@ const Footer = () => {
         </div>
         <hr></hr>
         <div className="row footer-bottom">
-          <p>English</p>
+          
           <p>Copyright © 2019. Derechos Reservados </p>
           <a>Aviso de Privacidad</a>
         </div>

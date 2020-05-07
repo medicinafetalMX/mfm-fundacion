@@ -82,10 +82,10 @@ class Intro extends Component {
             ref={div => (this.socialMedia = div)}
             className="social-media-container"
           >
-            <a href="https://facebook.com">
+            <a href="https://www.facebook.com/medfetalmexico/" target="_blank">
               <img src={facebook} alt="Visítanos en Facebook" />
             </a>
-            <a href="https://instagram.com">
+            <a href="https://instagram.com/medicinafetalmexico" target="_blank">
               <img src={instagram} alt="Visítanos en Instagram" />
             </a>
           </div>
