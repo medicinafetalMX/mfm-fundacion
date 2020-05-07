@@ -50,6 +50,8 @@ class MenuMobile extends Component {
           <Link to="/investigacion" ref={a => this.links.push(a)}>Investigación</Link>
           <Link to="/laborsocial" ref={a => this.links.push(a)}>Labor Social</Link>
           <Link to="/neurodesarrollo" ref={a => this.links.push(a)}>Neurodesarrollo</Link>
+          <Link to="/productividad" ref={a => this.links.push(a)}>Productividad</Link>
+          <Link to="/compartim" ref={a => this.links.push(a)}>Proyecto Compartim</Link>
           <Link to="/miembarazo" ref={a => this.links.push(a)}>Mi Embarazo</Link>
           <Link to="/eventos" ref={a => this.links.push(a)}>Eventos</Link>
           <Link to="/foro" ref={a => this.links.push(a)}>Foro</Link>

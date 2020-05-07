@@ -8,6 +8,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const SocialLaborPage = ({ data }) => {
   const datos = data.labor.edges;
+  const oferta = data.oferta.edges;
 
   return (
     <Layout>
@@ -26,11 +27,19 @@ const SocialLaborPage = ({ data }) => {
         ))}
         <br />
         <PrimaryHeader title="Lo que ofrecemos" />
-        {datos.map(({ node }, index) => (
-          <div key={index}>
-            {documentToReactComponents(node.lista.json)}
-          </div>
-        ))}
+
+        <div className="offer-container">
+          {oferta.map(({ node }, index) => (
+            <div key={index} className="offer">
+              <div className="image">
+                <img src={node.image.file.url} alt=""/>
+              </div>
+              <div className="title">
+                {node.name}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   )
@@ -53,6 +62,18 @@ export const query = graphql`
           }
           lista {
             json
+          }
+        }
+      }
+    }
+    oferta: allContentfulOfertaLaborSocial {
+      edges {
+        node {
+          name
+          image {
+            file {
+              url
+            }
           }
         }
       }
