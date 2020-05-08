@@ -1,14 +1,14 @@
-import React from "react";
-import SectionTitle from "../components/SectionTitle";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import PrimaryHeader from "../components/primaryHeader";
-import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import React from "react"
+import SectionTitle from "../components/SectionTitle"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import PrimaryHeader from "../components/primaryHeader"
+import { graphql } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const SocialLaborPage = ({ data }) => {
-  const datos = data.labor.edges;
-  const oferta = data.oferta.edges;
+  const datos = data.labor.edges
+  const oferta = data.oferta.edges
 
   return (
     <Layout>
@@ -17,13 +17,15 @@ const SocialLaborPage = ({ data }) => {
         <SectionTitle title="Labor Social" />
         <div className="hero-image">
           {datos.map(({ node }, index) => (
-            <img key={index} src={node.head.file.url} alt="Fotografía de Curso MFM" />
+            <img
+              key={index}
+              src={node.head.file.url}
+              alt="Fotografía de Curso MFM"
+            />
           ))}
         </div>
         {datos.map(({ node }, index) => (
-          <div key={index}>
-            {documentToReactComponents(node.content.json)}
-          </div>
+          <div key={index}>{documentToReactComponents(node.content.json)}</div>
         ))}
         <br />
         <PrimaryHeader title="Lo que ofrecemos" />
@@ -32,11 +34,12 @@ const SocialLaborPage = ({ data }) => {
           {oferta.map(({ node }, index) => (
             <div key={index} className="offer">
               <div className="image">
-                <img src={node.image.file.url} alt=""/>
+                <img src={node.image.file.url} alt="" />
               </div>
-              <div className="title">
-                {node.name}
+              <div className="text-cover">
+                {documentToReactComponents(node.description.json)}
               </div>
+              <div className="title">{node.name}</div>
             </div>
           ))}
         </div>
@@ -45,7 +48,7 @@ const SocialLaborPage = ({ data }) => {
   )
 }
 
-export default SocialLaborPage;
+export default SocialLaborPage
 
 export const query = graphql`
   {
@@ -74,6 +77,9 @@ export const query = graphql`
             file {
               url
             }
+          }
+          description {
+            json
           }
         }
       }
