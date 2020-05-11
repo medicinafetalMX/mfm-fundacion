@@ -3,18 +3,18 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import logo from "../images/mfmflogo.png"
-import MenuHamburger from "./MenuHamburger";
-import MenuMobile from "./MenuMobile";
+import MenuHamburger from "./MenuHamburger"
+import MenuMobile from "./MenuMobile"
 
 class Header extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      isMenuOpen: false
+      isMenuOpen: false,
     }
 
-    this.toggleMenu = this.toggleMenu.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this)
   }
 
   toggleMenu() {
@@ -23,12 +23,14 @@ class Header extends Component {
 
   render() {
     return (
-      <header className={this.state.isMenuOpen ? 'header-fixed' : ''}>
+      <header className={this.state.isMenuOpen ? "header-fixed" : ""}>
         <Link to="/" className="logo">
           <img src={logo} alt="" />
         </Link>
         <div className="menu">
-          <Link to="/" className="menu-link">Inicio</Link>
+          <Link to="/" className="menu-link">
+            Inicio
+          </Link>
           <div className="drop-menu">
             <button className="drop-button menu-link">Acerca de</button>
             <div className="drop-content">
@@ -41,11 +43,24 @@ class Header extends Component {
               <Link to="/productividad">Productividad</Link>
             </div>
           </div>
-          <Link to="/compartim" className="menu-link">Proyecto Compartim</Link>
-          <Link to="/miembarazo" className="menu-link">Mi Embarazo</Link>
-          <Link to="/eventos" className="menu-link">Eventos</Link>
-          <Link to="/foro" className="menu-link">Foro</Link>
-          <Link to="/apoya" className="menu-link">Cómo Apoyar</Link>
+          <Link to="/compartim" className="menu-link">
+            Proyecto Compartim
+          </Link>
+          <Link to="/miembarazo" className="menu-link">
+            Mi Embarazo
+          </Link>
+          <Link to="/eventos" className="menu-link">
+            Eventos
+          </Link>
+          <Link to="/foro" className="menu-link">
+            Foro
+          </Link>
+          <Link to="/testimonios" className="menu-link">
+            Testimonios
+          </Link>
+          <Link to="/apoya" className="menu-link">
+            Cómo Apoyar
+          </Link>
         </div>
         <MenuHamburger
           isMenuOpen={this.state.isMenuOpen}
