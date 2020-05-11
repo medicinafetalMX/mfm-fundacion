@@ -1,31 +1,65 @@
-.offer{
+.offer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 10px;
-  background-color: #FFF6F6;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff6f6;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
-  .title{
+  position: relative;
+
+  .title {
     font-family: var(--font-headers);
   }
-  .image{
+  .image {
     height: 170px;
     border-radius: 5px;
     margin-bottom: 10px;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 5px;
     }
   }
+  .text-cover {
+    visibility: hidden;
+    position: absolute;
+    padding: 10px;
+    margin: -10px;
+    height: 180px;
+    width: 100%;
+    font-family: var(--font-headers);
+    font-size: 14px;
+    color: var(--clear-background);
+    background-color: rgba(235, 112, 149, 0.8);
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: visibility 0s ease-in-out 0.5s, opacity 0.5s ease-in-out;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      margin: 0px;
+    }
+  }
+  &:hover {
+    .text-cover {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  }
 }
 
-.offer-container{
+.offer-container {
   margin-bottom: 4rem;
   display: grid;
-	grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
