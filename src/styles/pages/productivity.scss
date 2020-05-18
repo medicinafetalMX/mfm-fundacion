@@ -1,3 +1,38 @@
-.productivity-page{
-  min-height: 70vh;
+.productivity-page {
+  min-height: 100vh;
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 48%);
+    grid-gap: 4%;
+
+    .stat {
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 150px;
+        height: auto;
+      }
+      .stat-content {
+        h4 {
+          font-size: 20px;
+        }
+        span {
+          color: var(--color-secondary);
+          font-weight: bold;
+          font-family: var(--font-headers);
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .productivity-page {
+    min-height: 150vh;
+    .stats-grid {
+      grid-template-columns: 100%;
+      grid-gap: 2%;
+    }
+  }
 }
