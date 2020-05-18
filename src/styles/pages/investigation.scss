@@ -6,4 +6,31 @@
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+  .investigation-articles {
+    ul {
+      li {
+        display: list-item;
+        font-family: var(--font-body);
+        font-size: 18px;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-weight: 300;
+        text-indent: -1rem;
+        p {
+          display: inline;
+        }
+        a {
+          text-decoration: none;
+          color: var(--color-secondary);
+          font-family: var(--font-headers);
+          font-weight: bold;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+      li::before {
+        margin-right: 0.5em;
+      }
+    }
+  }
 }

@@ -1,3 +1,27 @@
-.productivity-page{
-  min-height: 70vh;
+.productivity-page {
+  min-height: 90vh;
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-gap: 5px;
+    .stat {
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 150px;
+        height: auto;
+      }
+      .stat-content {
+        h4 {
+          font-size: 20px;
+        }
+        span {
+          color: var(--color-secondary);
+          font-weight: bold;
+          font-family: var(--font-headers);
+          font-size: 26px;
+        }
+      }
+    }
+  }
 }
