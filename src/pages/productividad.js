@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import CountUp from "react-countup"
 const ProductivityPage = ({ data }) => {
   const stats = data.stats.edges
-  console.log(stats)
   return (
     <Layout>
       <SEO title="Productividad" />
