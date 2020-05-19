@@ -50,7 +50,6 @@ class Intro extends Component {
                 node {
                   facebook
                   instagram
-                  twitter
                 }
               }
             }
@@ -103,9 +102,6 @@ class Intro extends Component {
                     </a>
                     <a href={node.instagram} target="_blank">
                       <img src={instagram} alt="Visítanos en Instagram" />
-                    </a>
-                    <a href={node.twitter} target="_blank">
-                      <img src={twitter} alt="Visítanos en Instagram" />
                     </a>
                   </>
                 ))}
