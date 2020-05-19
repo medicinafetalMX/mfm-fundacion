@@ -3,6 +3,7 @@ import SectionTitle from "../components/SectionTitle"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CountUp from "react-countup"
+import { graphql } from "gatsby"
 const ProductivityPage = ({ data }) => {
   const stats = data.stats.edges
   return (
