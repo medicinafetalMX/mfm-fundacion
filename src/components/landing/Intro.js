@@ -58,7 +58,7 @@ class Intro extends Component {
               edges {
                 node {
                   descripcion
-                  images {
+                  imagenes {
                     file {
                       url
                     }
@@ -81,10 +81,10 @@ class Intro extends Component {
                   loop
                   style={{ margin: "0px" }}
                 >
-                  {data.Images.edges.map(({ node }, index) => (
+                  {data.Images.edges[0].node.imagenes.map(({ file }, index) => (
                     <Carousel.Item>
                       <img
-                        src={node.images.file.url}
+                        src={file.url}
                         alt="Bienvenido a Medicina Fetal México"
                         ref={div => (this.image = div)}
                       />
