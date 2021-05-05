@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 import { graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import SectionTitle from "../components/SectionTitle";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SectionTitle from "../components/SectionTitle"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-import calendar from "../images/calendar.svg";
-import location from "../images/location.svg";
+import calendar from "../images/calendar.svg"
+import location from "../images/location.svg"
 
 const EventsPage = ({ data }) => {
   const datos = data.eventos.edges
@@ -23,11 +23,11 @@ const EventsPage = ({ data }) => {
             <div className="box">
               <h3>{node.titulo}</h3>
               <div className="line">
-                <img src={calendar} alt=""/>
+                <img src={calendar} alt="" />
                 <h4>{node.fecha}</h4>
               </div>
               <div className="line">
-                <img src={location} alt=""/>
+                <img src={location} alt="" />
                 <h4>{node.lugar}</h4>
               </div>
               <>{documentToReactComponents(node.descripcion.json)}</>
@@ -40,11 +40,11 @@ const EventsPage = ({ data }) => {
   )
 }
 
-export default EventsPage;
+export default EventsPage
 
 export const query = graphql`
   {
-    eventos : allContentfulEventos(sort: {order: DESC, fields: contentful_id}) {
+    eventos: allContentfulEventos {
       edges {
         node {
           titulo
