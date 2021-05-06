@@ -31,6 +31,9 @@ const EventsPage = ({ data }) => {
                 <h4>{node.lugar}</h4>
               </div>
               <>{documentToReactComponents(node.descripcion.json)}</>
+              <div className="card-img">
+                <img src={node?.imagen?.file?.url} />
+              </div>
             </div>
             <div className="circle-bot" />
           </div>
@@ -52,6 +55,11 @@ export const query = graphql`
           lugar
           descripcion {
             json
+          }
+          imagen {
+            file {
+              url
+            }
           }
         }
       }
