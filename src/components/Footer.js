@@ -57,9 +57,11 @@ const Footer = () => {
         </div>
         <hr></hr>
         <div className="row footer-bottom">
-          
           <p>Copyright © 2019. Derechos Reservados </p>
-          <a>Aviso de Privacidad</a>
+          <Link className="link" to="/avisoprivacidad">
+            {" "}
+            aviso de privacidad{" "}
+          </Link>
         </div>
       </div>
     </footer>
