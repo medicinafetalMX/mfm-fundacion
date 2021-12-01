@@ -1,10 +1,14 @@
 import React from "react"
+import SectionTitle from "../components/SectionTitle"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import logo from "../images/mfmflogo.png"
 
 const privacidadintegral = () => {
   return (
-    <div>
-      <h1>HOLA!</h1>
-    </div>
+    <Layout>
+      <SEO title="aviso de privacidad interal"></SEO>
+    </Layout>
   )
 }
 
