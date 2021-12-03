@@ -202,7 +202,7 @@ const privacidadintegral = () => {
           <p style={{ textAlign: "center" }}>
             <strong>
               {" "}
-              No doy mi consentimiento para la transferencia de mis dat
+              No doy mi consentimiento para la transferencia de mis datos.
             </strong>
           </p>
         </div>
