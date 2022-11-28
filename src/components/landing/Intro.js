@@ -114,15 +114,19 @@ class Intro extends Component {
               </div>
             </div>
             <div className="text-box" ref={div => (this.textBox = div)}>
-            <h1 ref={h1 => (this.header = h1)}>Adquiere el nuevo libro de ecografía fetal.</h1>
-            <p ref={p => (this.title = p)}>Autor: Dr. Rogelio Cruz Martínez</p>
-            <Link
-                to="/conocenos"
-                className="button button-cta"
-                ref={a => (this.cta = a)}
-              >
-                ¡Adquirir ahora!
-              </Link>
+              <h1 ref={h1 => (this.header = h1)}>Adquiere el nuevo libro de ecografía fetal.</h1>
+              <p ref={p => (this.title = p)}>Autor: Dr. Rogelio Cruz Martínez</p>
+              {
+                /*
+                          <Link
+                              to="/conocenos"
+                              className="button button-cta"
+                              ref={a => (this.cta = a)}
+                            >
+                              ¡Adquirir ahora!
+                            </Link>
+                */
+              }
 
               {
                 /*
