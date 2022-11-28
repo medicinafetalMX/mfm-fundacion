@@ -80,6 +80,8 @@ class Intro extends Component {
                   loop
                   style={{ margin: "0px" }}
                 >
+                  {
+                    /*
                   {data.Images.edges[0].node.imagenes.map(({ file }, index) => (
                     <Carousel.Item>
                       <img
@@ -89,7 +91,11 @@ class Intro extends Component {
                       />
                     </Carousel.Item>
                   ))}
+                    */
+                  }
                 </Carousel>
+
+                <img src="/img/libro.jpg" style={{ "maxWidth": "500px", "maxHeight": "700px" }} />
               </div>
               <div
                 ref={div => (this.socialMedia = div)}
@@ -108,6 +114,18 @@ class Intro extends Component {
               </div>
             </div>
             <div className="text-box" ref={div => (this.textBox = div)}>
+            <h1 ref={h1 => (this.header = h1)}>Adquiere el nuevo libro de ecografía fetal.</h1>
+            <p ref={p => (this.title = p)}>Autor: Dr. Rogelio Cruz Martínez</p>
+            <Link
+                to="/conocenos"
+                className="button button-cta"
+                ref={a => (this.cta = a)}
+              >
+                ¡Adquirir ahora!
+              </Link>
+
+              {
+                /*
               <p ref={p => (this.title = p)}>Fundación Medicina Fetal México</p>
               <h1 ref={h1 => (this.header = h1)}>
                 {data.Images.edges.map(({ node }, index) => (
@@ -121,6 +139,8 @@ class Intro extends Component {
               >
                 Conoce más
               </Link>
+                */
+              }
             </div>
           </section>
         )}
