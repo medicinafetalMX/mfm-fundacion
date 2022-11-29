@@ -95,7 +95,7 @@ class Intro extends Component {
                   }
                 </Carousel>
 
-                <img src="/img/libro.jpg" style={{ "maxWidth": "500px", "maxHeight": "700px" }} />
+                <img src="/img/DSC_0003.jpg" />
               </div>
               <div
                 ref={div => (this.socialMedia = div)}
@@ -113,20 +113,42 @@ class Intro extends Component {
                 ))}
               </div>
             </div>
-            <div className="text-box" ref={div => (this.textBox = div)}>
-              <h1 ref={h1 => (this.header = h1)}>Adquiere el nuevo libro de ecografía fetal.</h1>
-              <p ref={p => (this.title = p)}>Autor: Dr. Rogelio Cruz Martínez</p>
-              {
-                /*
-                          <Link
-                              to="/conocenos"
-                              className="button button-cta"
-                              ref={a => (this.cta = a)}
-                            >
-                              ¡Adquirir ahora!
-                            </Link>
-                */
-              }
+            <div className="text-box" ref={div => (this.textBox = div)} style={{ "display": "flex", "alignItems": "center" }}>
+              <h1 ref={h1 => (this.header = h1)} >ECOGRAFÍA FETAL LIBRO</h1>
+              <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
+                <p ref={p => (this.title = p)} style={{ "display": "flex" }}>Los avances tecnológicos han permitido una favorable evolución de los alcances
+                  clínicos de la Ecografía Fetal como disciplina médica. Con la mejoría en la
+                  resolución de la imagen ecográfica, se ha incrementado también la capacidad de
+                  evaluar nuevas estructuras intrafetales y lograr comprender mejor la anatomía y
+                  desarrollo fetal. Aunque existen otros textos relacionados con la Ecografía Fetal
+                </p>
+              </div>
+              <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
+                <p ref={p => (this.title = p)} >Son escasos los que incluyen imágenes de alta resolución de las diferentes
+                  estructuras anatómicas del feto. Esta obra ha sido realizada por especialistas en
+                  Medicina Materno Fetal que colaboran con la Fundación Medicina Fetal México e
+                  incluye una gran variedad de imágenes ecográficas obstétricas de máxima
+                  resolución y calidad, así como guías técnicas concisas para lograr una adecuada
+                  adquisición e interpretación de los diferentes planos ecográficos recomendados
+                  durante la evaluación ultrasonográfica del feto.
+                </p>
+              </div>
+              <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
+              <p ref={p => (this.title = p)}>La obra ha sido especialmente diseñada para acortar la curva de aprendizaje a
+                todos los médicos de diferentes disciplinas relacionadas con el Ultrasonido
+                Obstétrico y tiene el objetivo de convertirse en la guía principal para reconocer la
+                normalidad de la Ecografía Fetal a diferentes edades gestacionales
+              </p>
+              </div>
+
+              <Link
+                to="/conocenos"
+                className="button button-cta"
+                ref={a => (this.cta = a)}
+              >
+                ¡Adquirir ahora!
+              </Link>
+
 
               {
                 /*
