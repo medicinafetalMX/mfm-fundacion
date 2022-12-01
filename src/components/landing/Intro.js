@@ -8,7 +8,7 @@ import facebook from "../../images/facebook.svg"
 import instagram from "../../images/instagram.svg"
 import twitter from "../../images/twitter.svg"
 import { PayPalButtons } from "@paypal/react-paypal-js"
-import {navigate} from "gatsby"
+import { navigate } from "gatsby"
 class Intro extends Component {
   constructor(props) {
     super(props)
@@ -136,13 +136,21 @@ class Intro extends Component {
                 </p>
               </div>
               <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
-              <p ref={p => (this.title = p)}>La obra ha sido especialmente diseñada para acortar la curva de aprendizaje a
-                todos los médicos de diferentes disciplinas relacionadas con el Ultrasonido
-                Obstétrico y tiene el objetivo de convertirse en la guía principal para reconocer la
-                normalidad de la Ecografía Fetal a diferentes edades gestacionales
-              </p>
+                <p ref={p => (this.title = p)}>La obra ha sido especialmente diseñada para acortar la curva de aprendizaje a
+                  todos los médicos de diferentes disciplinas relacionadas con el Ultrasonido
+                  Obstétrico y tiene el objetivo de convertirse en la guía principal para reconocer la
+                  normalidad de la Ecografía Fetal a diferentes edades gestacionales
+                </p>
               </div>
 
+              <Link
+                to="/libro"
+                className="button button-cta"
+                ref={a => (this.cta = a)}
+                
+              >¡Comprar ahora!</Link>
+
+              {/*
               <PayPalButtons style={{'color': 'blue'}} 
                 className="button button-cta"
                 createOrder={(data, actions) => {
@@ -160,6 +168,7 @@ class Intro extends Component {
                 }}
               >
               </PayPalButtons>
+              */}
 
 
               {

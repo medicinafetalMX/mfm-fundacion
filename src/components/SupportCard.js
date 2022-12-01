@@ -3,7 +3,8 @@ import { StaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 
-const SupportCard = () => {
+
+const SupportCard = ({amount}) => {
   return (
     <StaticQuery
       query={graphql`
@@ -28,7 +29,7 @@ const SupportCard = () => {
       render={data => (
         <div className="support-card">
           <div>
-            {documentToReactComponents(data.apoya.edges[0].node.descripcion.json)}
+          { !amount && documentToReactComponents(data.apoya.edges[0].node.descripcion.json)}
           </div>
           <div className="donations-card">
             <div className="circle-up" />
@@ -37,9 +38,12 @@ const SupportCard = () => {
             <p><b>Banco: </b>{data.apoya.edges[0].node.banco}</p>
             <p><b>No. Cuenta: </b>{data.apoya.edges[0].node.cuenta}</p>
             <p><b>CLABE: </b>{data.apoya.edges[0].node.clabe}</p>
+            { amount && <p><b>Monto: </b>{amount}</p>}
           </div>
           <p>
-            ¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>{data.apoya.edges[0].node.correo}</a> o llámanos al {data.apoya.edges[0].node.telefono}.
+            { amount 
+              ? <>Manda tu comprobante y dirección de envío a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>{data.apoya.edges[0].node.correo}</a> o llámanos al {data.apoya.edges[0].node.telefono}.</> 
+              : <>¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>{data.apoya.edges[0].node.correo}</a> o llámanos al {data.apoya.edges[0].node.telefono}.</>}
           </p>
         </div>
       )}
