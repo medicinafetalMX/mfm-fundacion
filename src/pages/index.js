@@ -12,39 +12,42 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { graphql, Link } from "gatsby"
 import SupportCard from "../components/SupportCard"
 import SectionTitle from "../components/SectionTitle"
+import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 const IndexPage = ({ data }) => {
   const datos = data.convenios.edges
   const apoya = data.apoya.edges
   return (
     <Layout>
-      <SEO title="Inicio" />
+      <PayPalScriptProvider options={{'client-id': 'AZA3ngQqNfdBlBx8QPDvAx99psfdWvXDPWu0s5M9ixVJDm8d27JY34MiHtw-w5Swl9Vm8X7S9vqsSiyV', 'currency': 'MXN', 'vault': 'true'}}>
+        <SEO title="Inicio" />
 
-      <Intro />
-      <HistoryBlock />
+        <Intro />
+        <HistoryBlock />
 
-      <About />
-      <div className="content-body support-page">
-        <SectionTitle title="Ayúdanos a apoyar" />
-        <SupportCard />
-        <br/>
+        <About />
+        <div className="content-body support-page">
+          <SectionTitle title="Ayúdanos a apoyar" />
+          <SupportCard />
+          <br />
 
-        <Link to="/apoya" className="button button-cta">Contáctanos</Link>
-      </div>
-      <section className="institutions">
-        <div className="content-screen">
-          <PrimaryHeader title="Contamos con el respaldo de diversas instituciones" />
-          <div className="images-container">
-            {datos.map(({ node }, index) => (
-              <div key={index}>
-                <Institutions
-                  image={node.imagen.file.url}
-                  ltText={node.organizacin}
-                />
-              </div>
-            ))}
-          </div>
+          <Link to="/apoya" className="button button-cta">Contáctanos</Link>
         </div>
-      </section>
+        <section className="institutions">
+          <div className="content-screen">
+            <PrimaryHeader title="Contamos con el respaldo de diversas instituciones" />
+            <div className="images-container">
+              {datos.map(({ node }, index) => (
+                <div key={index}>
+                  <Institutions
+                    image={node.imagen.file.url}
+                    ltText={node.organizacin}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </PayPalScriptProvider>
     </Layout>
   )
 }

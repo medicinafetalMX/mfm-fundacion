@@ -7,6 +7,8 @@ import cover from "../../images/home/baby.jpg"
 import facebook from "../../images/facebook.svg"
 import instagram from "../../images/instagram.svg"
 import twitter from "../../images/twitter.svg"
+import { PayPalButtons } from "@paypal/react-paypal-js"
+import {navigate} from "gatsby"
 class Intro extends Component {
   constructor(props) {
     super(props)
@@ -141,13 +143,23 @@ class Intro extends Component {
               </p>
               </div>
 
-              <Link
-                to="/conocenos"
+              <PayPalButtons style={{'color': 'blue'}} 
                 className="button button-cta"
-                ref={a => (this.cta = a)}
+                createOrder={(data, actions) => {
+                  return actions.order.create({
+                    'purchase_units': [{
+                      'amount': {
+                        value: "0.01"
+                      }
+                    }],
+                    "application_context": {"brand_name": "Fundación Medicina Fetal México"}
+                  })
+                }}
+                onApprove = {(data, actions) =>{
+                  navigate("/successPayment")
+                }}
               >
-                ¡Adquirir ahora!
-              </Link>
+              </PayPalButtons>
 
 
               {
