@@ -7,6 +7,9 @@ import facebook from "../images/facebook.svg"
 import instagram from "../images/instagram.svg"
 import Institutions from "../components/landing/Institutions";
 import SupportCard from "../components/SupportCard";
+import { PayPalButtons } from "@paypal/react-paypal-js"
+import { navigate } from "gatsby"
+import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 
 const libro = ({ data }) => {
   const datos = data.apoya.edges;
@@ -15,45 +18,65 @@ const libro = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Compra de libro" />
-      <div className="content-body support-page">
-        <SectionTitle title="Comprar libro" />
-        <SupportCard amount={"$2000 MXN"}/>
-        <div className="row button-container">
-          {datos.map(({ node }, index) => (
-            <Fragment key={index}>
-              <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
-              <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
-            </Fragment>
-          ))}
-        </div>
-        <br />
-        <p>
-          No olvides de seguirnos en nuestras redes sociales:
-        </p>
-        {redes.map(({ node }, index) => (
-          <div className="social-media-container" key={index}>
-            <a href={`${node.facebook}`}>
-              <img src={facebook} alt="Visítanos en Facebook" />
-            </a>
-            <a href={`${node.instagram}`}>
-              <img src={instagram} alt="Visítanos en Instagram" />
-            </a>
+      <PayPalScriptProvider options={{ 'client-id': 'AapUGGBGoyNBt1cGA3gVnCR3_vTvfUhwHpuz1CF3XW_VWuL_u-WMYxemrpITpaknMMtz39cWEskwo35L', 'currency': 'MXN', 'vault': 'true' }}>
+        <SEO title="Compra de libro" />
+        <div className="content-body support-page">
+          <SectionTitle title="Comprar libro" />
+            <PayPalButtons style={{ 'color': 'blue' }}
+              className="button button-cta"
+              createOrder={(data, actions) => {
+                return actions.order.create({
+                  'purchase_units': [{
+                    'amount': {
+                      value: "2000"
+                    }
+                  }],
+                  "application_context": { "brand_name": "Fundación Medicina Fetal México" }
+                })
+              }}
+              onApprove={(data, actions) => {
+                navigate("/successPayment")
+              }}
+            >
+            </PayPalButtons>
+          <SupportCard amount={"$2000 MXN"} />
+          <div className="row button-container">
+            {datos.map(({ node }, index) => (
+              <Fragment key={index}>
+                <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
+                <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
+              </Fragment>
+            ))}
           </div>
-        ))}
-        <br/><br/>
-        <SectionTitle title="Nuestros Patrocinadores" />
-        <div className="images-container">
-          {convenios.map(({ node }, index) => (
-            <div key={index}>
-              <Institutions
-                image={node.imagen.file.url}
-              />
+
+          <br />
+          <p>
+            No olvides de seguirnos en nuestras redes sociales:
+          </p>
+          {redes.map(({ node }, index) => (
+            <div className="social-media-container" key={index}>
+              <a href={`${node.facebook}`}>
+                <img src={facebook} alt="Visítanos en Facebook" />
+              </a>
+              <a href={`${node.instagram}`}>
+                <img src={instagram} alt="Visítanos en Instagram" />
+              </a>
             </div>
           ))}
+          <br /><br />
+          <SectionTitle title="Nuestros Patrocinadores" />
+          <div className="images-container">
+            {convenios.map(({ node }, index) => (
+              <div key={index}>
+                <Institutions
+                  image={node.imagen.file.url}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </Layout>
+      </PayPalScriptProvider>
+    </Layout >
   )
 }
 
