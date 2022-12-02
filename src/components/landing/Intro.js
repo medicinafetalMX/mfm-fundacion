@@ -2,8 +2,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import React, { Component } from "react"
 import { TimelineLite } from "gsap"
 import Carousel from "react-grid-carousel"
-
-import cover from "../../images/home/baby.jpg"
+import book from "../../images/home/libro.jpg"
 import facebook from "../../images/facebook.svg"
 import instagram from "../../images/instagram.svg"
 import twitter from "../../images/twitter.svg"
@@ -97,7 +96,7 @@ class Intro extends Component {
                   }
                 </Carousel>
 
-                <img src="/img/DSC_0003.jpg" />
+                <img src={book} alt=""/>
               </div>
               <div
                 ref={div => (this.socialMedia = div)}
