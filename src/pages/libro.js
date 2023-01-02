@@ -22,23 +22,32 @@ const libro = ({ data }) => {
         <SEO title="Compra de libro" />
         <div className="content-body support-page">
           <SectionTitle title="Comprar libro" />
-            <PayPalButtons style={{ 'color': 'blue' }}
-              className="button button-cta"
-              createOrder={(data, actions) => {
-                return actions.order.create({
-                  'purchase_units': [{
-                    'amount': {
-                      value: "2000"
-                    }
-                  }],
-                  "application_context": { "brand_name": "Fundación Medicina Fetal México" }
-                })
-              }}
-              onApprove={(data, actions) => {
-                navigate("/successPayment")
-              }}
-            >
-            </PayPalButtons>
+          <h3>Opción 1.</h3>
+          <PayPalButtons style={{ 'color': 'blue' }}
+            className="button button-cta"
+            createOrder={(data, actions) => {
+              return actions.order.create({
+                'purchase_units': [{
+                  'amount': {
+                    value: "2000"
+                  }
+                }],
+                "application_context": { "brand_name": "Fundación Medicina Fetal México" }
+              })
+            }}
+            onApprove={(data, actions) => {
+              navigate("/successPayment")
+            }}
+          >
+          </PayPalButtons>
+          <br />
+          <div className="line-1">
+            <span className="line-2">
+              o
+            </span>
+          </div>
+          <br/>
+          <h3>Opción 2.</h3>
           <SupportCard amount={"$2000 MXN"} />
           <div className="row button-container">
             {datos.map(({ node }, index) => (
