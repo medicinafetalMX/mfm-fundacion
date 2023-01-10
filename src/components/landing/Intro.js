@@ -114,9 +114,9 @@ class Intro extends Component {
                 ))}
               </div>
             </div>
-            <div className="text-box" ref={div => (this.textBox = div)} style={{ "display": "flex", "alignItems": "center" }}>
+            <div className="text-box" ref={div => (this.textBox = div)} >
               <h1 ref={h1 => (this.header = h1)} >ECOGRAFÍA FETAL LIBRO</h1>
-              <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
+              <div style={{ "wordBreak": "keep-all", "textAlign": "justify", "maxWidth": "600px" }}>
                 <p ref={p => (this.title = p)} style={{ "display": "flex" }}>Los avances tecnológicos han permitido una favorable evolución de los alcances
                   clínicos de la Ecografía Fetal como disciplina médica. Con la mejoría en la
                   resolución de la imagen ecográfica, se ha incrementado también la capacidad de
@@ -124,7 +124,7 @@ class Intro extends Component {
                   desarrollo fetal. Aunque existen otros textos relacionados con la Ecografía Fetal
                 </p>
               </div>
-              <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
+              <div style={{ "wordBreak": "keep-all", "textAlign": "justify", "maxWidth": "600px" }}>
                 <p ref={p => (this.title = p)} >Son escasos los que incluyen imágenes de alta resolución de las diferentes
                   estructuras anatómicas del feto. Esta obra ha sido realizada por especialistas en
                   Medicina Materno Fetal que colaboran con la Fundación Medicina Fetal México e
@@ -134,7 +134,7 @@ class Intro extends Component {
                   durante la evaluación ultrasonográfica del feto.
                 </p>
               </div>
-              <div style={{ "wordBreak": "keep-all", "textAlign": "justify" }}>
+              <div style={{ "wordBreak": "keep-all", "textAlign": "justify", "maxWidth": "600px" }}>
                 <p ref={p => (this.title = p)}>La obra ha sido especialmente diseñada para acortar la curva de aprendizaje a
                   todos los médicos de diferentes disciplinas relacionadas con el Ultrasonido
                   Obstétrico y tiene el objetivo de convertirse en la guía principal para reconocer la

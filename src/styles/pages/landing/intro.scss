@@ -1,8 +1,8 @@
 .intro {
   display: flex;
+  justify-content: flex-end;
   width: 100%;
   height: calc(100vh - var(--header-height));
-  position: relative;
   .blank-box {
     width: 50%;
     height: inherit;
@@ -11,11 +11,7 @@
     align-items: flex-end;
     justify-content: flex-start;
     .cover {
-      position: absolute;
-      width: 58vw;
       height: calc(100vh - 88px);
-      object-fit: cover;
-      padding: 10vh 0;
       z-index: 2;
       display: flex;
       align-items: center;
@@ -23,9 +19,6 @@
       overflow: hidden;
       img {
         width: 100%;
-        height: 100%;
-        max-height: 500px;
-        object-fit: cover;
       }
       .bghjHX {
         margin: 0px !important;
@@ -47,25 +40,15 @@
     }
   }
   .text-box {
-    width: 50%;
-    position: absolute;
-    right: 0;
-    padding: 0 2em 0 12%;
-    height: inherit;
     background-color: var(--color-primary);
-    //animation: slide-in 1.7s ease forwards;
-    animation-delay: 1.2s;
+    width: 100%;
+    color: white;
+    max-width: 750px;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
-    color: #ffffff;
-    p {
-      margin-bottom: 1rem;
-    }
-    h1 {
-      margin-bottom: 80px;
-    }
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
 }
 
@@ -84,10 +67,8 @@
     flex-direction: column;
     .blank-box {
       width: 100%;
-      justify-content: center;
       .cover {
         width: 100%;
-        padding-top: 0;
         height: 50vh;
         top: 0;
       }
@@ -98,7 +79,6 @@
     .text-box {
       width: 100%;
       justify-content: flex-end;
-      padding: 0 7% 50px 7%;
       h1 {
         font-size: 1.8em;
         margin-bottom: 30px;

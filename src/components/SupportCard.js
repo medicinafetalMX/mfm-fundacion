@@ -42,8 +42,8 @@ const SupportCard = ({amount}) => {
           </div>
           <p>
             { amount 
-              ? <>Manda tu comprobante y dirección de envío a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>logistica@medicinafetalmexico.com</a> o llámanos al 33 1082 4629.</> 
-              : <>¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>{data.apoya.edges[0].node.correo}</a> o llámanos al {data.apoya.edges[0].node.telefono}.</>}
+              ? <>Manda tu comprobante y dirección de envío a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>donacionesfundacion@medicinafetalmexico.com</a> o llámanos al 442 168 7879.</> 
+              : <>¡Contáctanos! Escribe un mail a <a className="secondary-link" href={`mailto:${data.apoya.edges[0].node.correo}?Subject=Nueva%20Pregunta`}>{data.apoya.edges[0].node.correo}</a> o llámanos al 4421687879.</>}
           </p>
         </div>
       )}
