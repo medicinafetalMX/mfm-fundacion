@@ -28,8 +28,8 @@ const avisoprivacidad = () => {
               en lo sucesivo denominada como la “ORGANIZACIÓN”, se encuentra
               ubicada en Blvd. Bernardo Quintana Núm. 4060, Int. 508, Col. San
               Pablo, 76125, Querétaro, Querétaro, México, con número de
-              teléfono: 442 195 7014 y correo electrónico:
-              fundacion@medicinafetalmexico.com; es el responsable del uso y
+              teléfono: 442 168 78 79 y correo electrónico:
+              donacionesfundacion@medicinafetalmexico.com; es el responsable del uso y
               protección de sus datos personales, y al respecto le informamos lo
               siguiente:
             </p>
