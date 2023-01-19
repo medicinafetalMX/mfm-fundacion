@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
+import ultrasound from "../images/UltrasonidoGratuito.jpg"
 
 const EventsPage = ({ data }) => {
   const datos = data.eventos.edges
@@ -17,6 +18,30 @@ const EventsPage = ({ data }) => {
       <SEO title="Eventos" />
       <div className="content-body events-page">
         <SectionTitle title="Próximos eventos" />
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <h3></h3>
+            <div className="line">
+              <img src={calendar} alt="" />
+              <h4>26 enero 2023</h4>
+            </div>
+            <div className="line">
+              <img src={location} alt="" />
+              <h4>Krystal Grand Nuevo Vallarta, Nuevo Vallarta, Nayarit</h4>
+            </div>
+            <>
+              Agenda tu cita
+              442 168 7879
+            </>
+            <div className="card-img">
+              <br></br>
+              <img src={ultrasound} />
+            </div>
+          </div>
+          <div className="circle-bot" />
+        </div>
+
         {datos.map(({ node }, index) => (
           <div className="event-card">
             <div className="circle-up" />
