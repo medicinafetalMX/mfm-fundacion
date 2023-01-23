@@ -13,6 +13,7 @@ import { graphql, Link } from "gatsby"
 import SupportCard from "../components/SupportCard"
 import SectionTitle from "../components/SectionTitle"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
+import NewEvent from "../components/landing/NewEvent"
 const IndexPage = ({ data }) => {
   const datos = data.convenios.edges
   const apoya = data.apoya.edges
@@ -20,7 +21,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <PayPalScriptProvider options={{'client-id': 'AZA3ngQqNfdBlBx8QPDvAx99psfdWvXDPWu0s5M9ixVJDm8d27JY34MiHtw-w5Swl9Vm8X7S9vqsSiyV', 'currency': 'MXN', 'vault': 'true'}}>
         <SEO title="Inicio" />
-
+        <NewEvent/>
+        <br></br>
         <Intro />
         <HistoryBlock />
 
