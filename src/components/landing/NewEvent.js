@@ -77,7 +77,7 @@ class NewEvent extends Component {
                     <h1 ref={h1 => (this.header = h1)} >¡DI SÍ AL REDONDEO EN TIENDAS OXXO!</h1>
                     <p>
                       De enero a marzo de 2023 cada redondeo que hagas en tiendas Oxxo de Zapopan ayudarás con la compra de materiales e insumos médicos necesarios en las cirugías fetales y terapias neonatales.
-                      Tu aportación ayuda a mamás y bebés en vida fetal
+                      Tu aportación ayuda a mamás y bebés en vida fetal.
                     </p>
 
                     <h3 style={{"color": "#f5b4c8"}}><DateCountdown dateTo='March 31, 2023 24:00:00 GMT+03:00' mostSignificantFigure='day' numberOfFigures='1' locales_plural='' locales=''/> días restantes para donar </h3>
