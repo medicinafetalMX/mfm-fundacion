@@ -80,9 +80,7 @@ class NewEvent extends Component {
                       Tu aportación ayuda a mamás y bebés en vida fetal
                     </p>
 
-                    <h1 style={{"color": "#f5b4c8"}}>
-                    <DateCountdown dateTo='March 31, 2023 24:00:00 GMT+03:00' mostSignificantFigure='day' numberOfFigures='1'/>
-                    </h1>
+                    <h3 style={{"color": "#f5b4c8"}}><DateCountdown dateTo='March 31, 2023 24:00:00 GMT+03:00' mostSignificantFigure='day' numberOfFigures='1' locales_plural='' locales=''/> días restantes para donar </h3>
 
                   </div>
                 </div>
