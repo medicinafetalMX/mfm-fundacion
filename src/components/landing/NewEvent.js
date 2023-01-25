@@ -7,8 +7,18 @@ function NewEvent() {
   const endDate = new Date('March 31, 2023 23:59:59');
   var duration = endDate.getTime() - now.getTime();
   var  difference = duration / (1000 * 3600 * 24);
+  const [hide, setHide] = useState("");
   
-  useEffect(() => {       
+  useEffect(() => {   
+
+    if(now < endDate){
+      setHide("");
+    }
+    else{
+      setHide("none");
+    }
+    
+
     console.log(difference);
   }, [difference])
 
@@ -26,7 +36,7 @@ function NewEvent() {
                 Tu aportación ayuda a mamás y bebés en vida fetal.
               </p>
 
-              <h3 style={{"color": "#f5b4c8"}}>{difference.toFixed(0)} días restantes.</h3>
+              <h3 style={{"color": "#f5b4c8", "display": hide}}>{difference.toFixed(0)} días restantes.</h3>
             </div>
           </div>
         </div>
