@@ -19,7 +19,7 @@ function NewEvent() {
     else{
       setHide("none");
     }
-  }, [difference])
+  }, [difference, date])
 
   return (
     <>
