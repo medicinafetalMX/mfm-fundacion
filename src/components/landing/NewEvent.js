@@ -1,6 +1,6 @@
 import { Link, StaticQuery, graphql } from "gatsby"
 import React, { Component, useState, useEffect } from "react"
-import newEvent from "../../images/eventNew.jpeg"
+import newEvent from "../../images/eventNew.jpg"
 
 function NewEvent() {
   const now = new Date();

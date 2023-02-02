@@ -14,6 +14,8 @@ import SupportCard from "../components/SupportCard"
 import SectionTitle from "../components/SectionTitle"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 import NewEvent from "../components/landing/NewEvent"
+import difQro from "../images/LOGODIFQRO.jpeg"
+import difGdl from "../images/LogoDIFGDL.png"
 const IndexPage = ({ data }) => {
   const datos = data.convenios.edges
   const apoya = data.apoya.edges
@@ -33,7 +35,10 @@ const IndexPage = ({ data }) => {
           <br />
 
           <Link to="/apoya" className="button button-cta">Contáctanos</Link>
+          <br></br><br></br><br></br>
+          <div>Jalisco, San Gabriel #333 Col. Chapalita, CP 45040, Guadalajara Jal, México</div>
         </div>
+
         <section className="institutions">
           <div className="content-screen">
             <PrimaryHeader title="Contamos con el respaldo de diversas instituciones" />
@@ -43,10 +48,12 @@ const IndexPage = ({ data }) => {
                   <Institutions
                     image={node.imagen.file.url}
                     ltText={node.organizacin}
-                  />
+                  />                  
                 </div>
               ))}
-            </div>
+              <img src={difQro} alt="" />
+              <img src={difGdl} alt="" />
+            </div>            
           </div>
         </section>
       </PayPalScriptProvider>
