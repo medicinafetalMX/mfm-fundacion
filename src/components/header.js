@@ -52,6 +52,9 @@ class Header extends Component {
           <Link to="/eventos" className="menu-link">
             Eventos
           </Link>
+          <Link to="/prensa" className="menu-link">
+            Prensa
+          </Link>
           <Link to="/foro" className="menu-link">
             Foro
           </Link>
