@@ -29,7 +29,7 @@ const prensa = ({ data }) => {
           <div className="circle-bot" />
         </div>
         <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center" }}>
-          <video style={{ "maxWidth": "1200px" }} src="https://thumbnails.fuve.app/FUVE%20Intro.mp4" autoplay="" loop controls muted />
+          <video  src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fundacionPrensa.mp4" autoplay="" loop controls muted />
         </div>
         <br></br><br></br>
       </div>
