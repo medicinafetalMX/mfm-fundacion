@@ -18,73 +18,21 @@ const prensa = ({ data }) => {
 
   return (
     <Layout>
-      <PayPalScriptProvider options={{ 'client-id': 'AapUGGBGoyNBt1cGA3gVnCR3_vTvfUhwHpuz1CF3XW_VWuL_u-WMYxemrpITpaknMMtz39cWEskwo35L', 'currency': 'MXN', 'vault': 'true' }}>
-        <SEO title="Compra de libro" />
-        <div className="content-body support-page">
-          <SectionTitle title="Comprar libro" />
-          <h3>Opción 1.</h3>
-          <PayPalButtons style={{ 'color': 'blue' }}
-            className="button button-cta"
-            createOrder={(data, actions) => {
-              return actions.order.create({
-                'purchase_units': [{
-                  'amount': {
-                    value: "2000"
-                  }
-                }],
-                "application_context": { "brand_name": "Fundación Medicina Fetal México" }
-              })
-            }}
-            onApprove={(data, actions) => {
-              navigate("/successPayment")
-            }}
-          >
-          </PayPalButtons>
-          <br />
-          <div className="line-1">
-            <span className="line-2">
-              o
-            </span>
+      <div className="content-body pregnancy-page">
+        <SectionTitle title="Noticias nuevas" />
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <br></br>
+            <p style={{ "fontWeight": "700" }}>Entrevista Jalisco TV Programa Familia y Salud 24 enero 2023</p>
           </div>
-          <br/>
-          <h3>Opción 2.</h3>
-          <SupportCard amount={"$2000 MXN"} />
-          <div className="row button-container">
-            {datos.map(({ node }, index) => (
-              <Fragment key={index}>
-                <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
-                <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
-              </Fragment>
-            ))}
-          </div>
-
-          <br />
-          <p>
-            No olvides de seguirnos en nuestras redes sociales:
-          </p>
-          {redes.map(({ node }, index) => (
-            <div className="social-media-container" key={index}>
-              <a href={`${node.facebook}`}>
-                <img src={facebook} alt="Visítanos en Facebook" />
-              </a>
-              <a href={`${node.instagram}`}>
-                <img src={instagram} alt="Visítanos en Instagram" />
-              </a>
-            </div>
-          ))}
-          <br /><br />
-          <SectionTitle title="Nuestros Patrocinadores" />
-          <div className="images-container">
-            {convenios.map(({ node }, index) => (
-              <div key={index}>
-                <Institutions
-                  image={node.imagen.file.url}
-                />
-              </div>
-            ))}
-          </div>
+          <div className="circle-bot" />
         </div>
-      </PayPalScriptProvider>
+        <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center" }}>
+          <video style={{ "maxWidth": "1200px" }} src="https://thumbnails.fuve.app/FUVE%20Intro.mp4" autoplay="" loop controls muted />
+        </div>
+        <br></br><br></br>
+      </div>
     </Layout >
   )
 }
