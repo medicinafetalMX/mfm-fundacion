@@ -28,8 +28,8 @@ const prensa = ({ data }) => {
           </div>
           <div className="circle-bot" />
         </div>
-        <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center" }}>
-          <video  src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fundacionPrensa.mp4" autoplay="" loop controls muted />
+        <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center"}}>
+          <video  style={{"width": "100%"}} src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fundacionPrensa.mp4" autoplay="" loop controls muted />
         </div>
         <br></br><br></br>
       </div>
