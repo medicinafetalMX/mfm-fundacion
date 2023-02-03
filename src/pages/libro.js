@@ -52,7 +52,7 @@ const libro = ({ data }) => {
           <div className="row button-container">
             {datos.map(({ node }, index) => (
               <Fragment key={index}>
-                <a className="button button-cta" href={`mailto:${node.correo}?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
+                <a className="button button-cta" href={`mailto:donacionesfundacion@medicinafetalmexico.com?Subject=Nueva%20Pregunta`}>Enviar Correo Electrónico</a>
                 <a className="button button-cta" href={`tel:${node.telefono}`}>Llamar vía Teléfono</a>
               </Fragment>
             ))}
