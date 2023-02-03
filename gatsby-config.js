@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Medicina Fetal México`,
+    title: `Fundación MFM`,
     description: `Somos un grupo de especialistas, expertos en diagnóstico prenatal avanzado y cirugía fetal mínimamente invasiva. `,
     author: `@osmar_ro`,
   },
@@ -15,7 +15,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
+      }, 
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
