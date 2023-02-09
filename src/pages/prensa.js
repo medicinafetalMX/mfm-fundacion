@@ -33,6 +33,20 @@ const prensa = ({ data }) => {
         </div>
         <br></br><br></br>
       </div>
+      <div className="content-body pregnancy-page">
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <br></br>
+            <p style={{ "fontWeight": "700" }}>Entrevista para Noticias del Pueblito </p>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center"}}>
+          <video  style={{"width": "100%"}} src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fundacionPrensa2.mp4" autoplay="" loop controls muted />
+        </div>
+        <br></br><br></br>
+      </div>
     </Layout >
   )
 }
