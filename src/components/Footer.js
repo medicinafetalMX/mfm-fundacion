@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import IconFb from "../images/facebook.svg"
+import IconInsta from "../images/insta.png"
 import SocialLink from "./SocialLink"
 const Footer = () => {
   return (
@@ -50,9 +51,16 @@ const Footer = () => {
           <SocialLink
             onlyIcon
             colorIcon="white-icon"
-            url="https://www.facebook.com/medfetalmexico/"
+            url="https://www.facebook.com/fundacionmedfetalmexico"
           >
             <img src={IconFb} alt="" />
+          </SocialLink>
+          <SocialLink
+            onlyIcon
+            colorIcon="white-icon"
+            url="https://www.instagram.com/fundacionmedicinafetalmexico/"
+          >
+            <img src={IconInsta} alt="" />
           </SocialLink>
         </div>
         <hr></hr>
