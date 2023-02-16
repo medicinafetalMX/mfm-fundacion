@@ -7,6 +7,13 @@ import facebook from "../images/facebook.svg"
 import instagram from "../images/instagram.svg"
 import Institutions from "../components/landing/Institutions";
 import SupportCard from "../components/SupportCard";
+import dif from "../images/dif.png"
+import fetalmed from "../images/fetalmed.png"
+import ceme from "../images/logo_CemefiAFILIADO.png"
+import kimberly from "../images/Kymberly.jpeg"
+import premium from "../images/premium.jpeg"
+import oxxo from "../images/OXXO.png"
+import difQ from "../images/difQ.jpeg"
 
 const SupportPage = ({ data }) => {
   const datos = data.apoya.edges;
@@ -45,13 +52,13 @@ const SupportPage = ({ data }) => {
         <br/><br/>
         <SectionTitle title="Nuestros Patrocinadores" />
         <div className="images-container">
-          {convenios.map(({ node }, index) => (
-            <div key={index}>
-              <Institutions
-                image={node.imagen.file.url}
-              />
-            </div>
-          ))}
+        <img src={dif}/>
+        <img src={fetalmed}/>
+        <img src={premium}/>
+        <img src={kimberly}/>
+        <img src={difQ}/>
+        <img src={ceme}/>
+        <img src={oxxo}/>
         </div>
       </div>
     </Layout>
