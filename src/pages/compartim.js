@@ -4,12 +4,18 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
+import fetoton from "../images/fetoton23.jpg"
 
 const CompartimPage = () => {
   return (
     <Layout>
       <SEO title="FETOTON" />
       <div className="content-body compartim-page">
+        <SectionTitle title="FETOTON 2023" />
+        <div className="event-card">
+          <img src={fetoton} alt="" />
+          <div className="circle-bot" />
+        </div>
         <SectionTitle title="FETOTON 2021" />
         <div className="event-card">
           <div className="circle-up" />
@@ -37,7 +43,7 @@ const CompartimPage = () => {
         <video style={{ "width": "100%" }} src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fetoton.mp4" autoplay="" loop controls muted />
         <br></br><br></br><br></br>
       </div>
-      
+
     </Layout>
   )
 }
