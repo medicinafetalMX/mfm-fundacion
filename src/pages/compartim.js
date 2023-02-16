@@ -6,7 +6,7 @@ import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
 import fetoton from "../images/fetoton23.jpg"
 
-const Fetoton = () => {
+const CompartimPage = () => {
   return (
     <Layout>
       <SEO title="FETOTON" />
@@ -48,4 +48,4 @@ const Fetoton = () => {
   )
 }
 
-export default Fetoton;
+export default CompartimPage;
