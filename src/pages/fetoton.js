@@ -49,3 +49,44 @@ const Fetoton = () => {
 }
 
 export default Fetoton;
+
+export const query = graphql`
+  {
+    apoya: allContentfulApoya {
+      edges {
+        node {
+          correo
+          descripcion {
+            json
+          }
+          telefono
+          banco
+          clabe
+          cuenta
+          nombreFundacion
+        }
+      }
+    }
+    convenios: allContentfulConvenios {
+      edges {
+        node {
+          imagen {
+            file {
+              url
+            }
+          }
+          organizacin
+        }
+      }
+    }
+    redes: allContentfulRedesSociales {
+      edges {
+        node {
+          facebook
+          twitter
+          instagram
+        }
+      }
+    }
+  }
+`
