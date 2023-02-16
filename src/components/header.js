@@ -44,7 +44,7 @@ class Header extends Component {
             </div>
           </div>
           <Link to="/compartim" className="menu-link">
-            Proyecto Compartim
+            FETOTON
           </Link>
           <Link to="/miembarazo" className="menu-link">
             Mi Embarazo

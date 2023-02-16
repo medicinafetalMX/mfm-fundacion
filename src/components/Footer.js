@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="column">
               <h4>Conócenos</h4>
               <Link className="link" to="/compartim">
-                Proyecto Compartim
+                FETOTON
               </Link>
               <Link className="link" to="/investigacion">
                 Investigación
