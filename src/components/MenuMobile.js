@@ -65,8 +65,8 @@ class MenuMobile extends Component {
           <Link to="/productividad" ref={a => this.links.push(a)}>
             Productividad
           </Link>
-          <Link to="/compartim" ref={a => this.links.push(a)}>
-            Proyecto Compartim
+          <Link to="/fetoton" ref={a => this.links.push(a)}>
+            Fetoton
           </Link>
           <Link to="/miembarazo" ref={a => this.links.push(a)}>
             Mi Embarazo

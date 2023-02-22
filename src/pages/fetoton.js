@@ -13,6 +13,20 @@ const Fetoton = () => {
       <div className="content-body compartim-page">
         <SectionTitle title="FETOTON 2023" />
         <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <h3></h3>
+            <>
+            Brindar atención a mujeres embarazadas de cualquier edad gestacional realizando ultrasonidos avanzados, ofreciendo consulta médica y genética ante 
+            cualquier diagnóstico de patología, con la finalidad de reducir preeclampsia temprana, prematuridad y morbilidad neonatal.
+            </>
+            <div className="card-img">
+              <br></br>
+            </div>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div className="event-card">
           <img src={fetoton} alt="" />
           <div className="circle-bot" />
         </div>
