@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
-import fetoton from "../images/fetoton23.jpg"
+import fetoton from "../images/Fetoton23.jpg"
 
 const CompartimPage = () => {
   return (
