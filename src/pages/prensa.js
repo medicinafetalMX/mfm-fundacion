@@ -20,6 +20,34 @@ const prensa = ({ data }) => {
     <Layout>
       <div className="content-body pregnancy-page">
         <SectionTitle title="Noticias nuevas" />
+
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <br></br>
+            <p style={{ "fontWeight": "700" }}>Entrevista Radio 89.5 La radio TV</p>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center" }}>
+          <video style={{ "width": "100%" }} src="https://s3.amazonaws.com/fundacionmfm.com/news2.mp4" autoplay="" loop controls muted />
+        </div>
+        <br></br><br></br>
+
+
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <br></br>
+            <p style={{ "fontWeight": "700" }}>Entrevista Damas de Casa 19/04/2023</p>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div style={{ "display": "flex", "justifyContent": "center", "alignItems": "center" }}>
+          <video style={{ "width": "100%" }} src="https://s3.amazonaws.com/fundacionmfm.com/news1.mp4" autoplay="" loop controls muted />
+        </div>
+        <br></br><br></br>
+
         <div className="event-card">
           <div className="circle-up" />
           <div className="box">

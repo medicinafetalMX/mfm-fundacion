@@ -17,8 +17,34 @@ const Fetoton = () => {
           <div className="box">
             <h3></h3>
             <>
-            Brindar atención a mujeres embarazadas de cualquier edad gestacional realizando ultrasonidos avanzados, ofreciendo consulta médica y genética ante 
-            cualquier diagnóstico de patología, con la finalidad de reducir preeclampsia temprana, prematuridad y morbilidad neonatal.
+              <video style={{ "width": "100%" }} src="https://s3.amazonaws.com/fundacionmfm.com/fetoton-video2.mp4" autoplay="" loop controls muted />
+            </>
+            <div className="card-img">
+              <br></br>
+            </div>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <h3></h3>
+            <>
+              <video style={{ "width": "100%" }} src="https://s3.amazonaws.com/fundacionmfm.com/fetoton-video.mp4" autoplay="" loop controls muted />
+            </>
+            <div className="card-img">
+              <br></br>
+            </div>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <h3></h3>
+            <>
+              Brindar atención a mujeres embarazadas de cualquier edad gestacional realizando ultrasonidos avanzados, ofreciendo consulta médica y genética ante
+              cualquier diagnóstico de patología, con la finalidad de reducir preeclampsia temprana, prematuridad y morbilidad neonatal.
             </>
             <div className="card-img">
               <br></br>
@@ -54,7 +80,19 @@ const Fetoton = () => {
           </div>
           <div className="circle-bot" />
         </div>
-        <video style={{ "width": "100%" }} src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fetoton.mp4" autoplay="" loop controls muted />
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <h3></h3>
+            <>
+              <video style={{ "width": "100%" }} src="https://videospruebamfm.s3.us-east-2.amazonaws.com/fetoton.mp4" autoplay="" loop controls muted />
+            </>
+            <div className="card-img">
+              <br></br>
+            </div>
+          </div>
+          <div className="circle-bot" />
+        </div>
         <br></br><br></br><br></br>
       </div>
 

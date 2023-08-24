@@ -36,8 +36,8 @@ const SupportCard = ({amount}) => {
             <div className="circle-bot" />
             <p><b>Nombre de la fundación: </b>{data.apoya.edges[0].node.nombreFundacion}</p>
             <p><b>Banco: </b>{data.apoya.edges[0].node.banco}</p>
-            <p><b>No. Cuenta: </b>{data.apoya.edges[0].node.cuenta}</p>
-            <p><b>CLABE: </b>{data.apoya.edges[0].node.clabe}</p>
+            <p><b>No. Cuenta: </b>1219889884</p>
+            <p><b>CLABE: </b>072 320 012198898846</p>
             { amount && <p><b>Monto: </b>{amount}</p>}
           </div>
           <p>

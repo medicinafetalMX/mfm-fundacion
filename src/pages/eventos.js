@@ -10,6 +10,7 @@ import calendar from "../images/calendar.svg"
 import location from "../images/location.svg"
 import ultrasound from "../images/UltrasonidoGratuito.jpg"
 import cardiopatia from "../images/cardiopatia.jpeg"
+import redondeo from "../images/redondeo.jpeg"
 
 const EventsPage = ({ data }) => {
   const datos = data.eventos.edges
@@ -25,6 +26,29 @@ const EventsPage = ({ data }) => {
             <h3></h3>
             <div className="line">
               <img src={calendar} alt="" />
+              <h4>Marzo 2023</h4>
+            </div>
+            <div className="line">
+              <img src={location} alt="" />
+              <h4>OXXO</h4>
+            </div>
+            <>
+            De enero a marzo de 2023 cada redondeo que hagas en tiendas Oxxo de Zapopan ayudarás con la compra de materiales e insumos médicos necesarios en las 
+            cirugías fetales y terapias neonatales. Tu aportación ayuda a mamás y bebés en vida fetal
+            </>
+            <div className="card-img">
+              <br></br>
+              <img src={redondeo} />
+            </div>
+          </div>
+          <div className="circle-bot" />
+        </div>
+        <div className="event-card">
+          <div className="circle-up" />
+          <div className="box">
+            <h3></h3>
+            <div className="line">
+              <img src={calendar} alt="" />
               <h4>Febrero 2023</h4>
             </div>
             <div className="line">
@@ -32,9 +56,9 @@ const EventsPage = ({ data }) => {
               <h4>Fundación Medicina Fetal</h4>
             </div>
             <>
-            En conmemoración del día mundial de las cardiopatías congénitas ❤️ la Fundación Medicina Fetal México te invita a escuchar el corazón de tu bebe. 
-            Durante todo el mes de febrero agenda tu cita y escucha el #CORAZÓNDETUBEBÉ
-            Nuestra misión es hacer que disfrutes con tranquilidad el milagro de dar vida  
+              En conmemoración del día mundial de las cardiopatías congénitas la Fundación Medicina Fetal México te invita a escuchar el corazón de tu bebe.
+              Durante todo el mes de febrero agenda tu cita y escucha el #CORAZÓNDETUBEBÉ
+              Nuestra misión es hacer que disfrutes con tranquilidad el milagro de dar vida
 
             </>
             <div className="card-img">
